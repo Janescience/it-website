@@ -24,283 +24,380 @@
 
     <?php  include('navbar.php') ?>
 
-      <div class="page-wrapper">
-        <div class="container-fluid">
+    <div class="page-wrapper">
+      <div class="container-fluid">
+        <div class="row page-titles"></div>
 
-          <div class="row page-titles">
-
-          </div>
-<!--=========================== ส่วนหัว [รูปภาพสไลด์] ===========================-->
           <div class="row">
             <div class="col-lg-12">
               <div class="card ">
-
-
-
                 <div class="card-block ">
                   <div class="card">
 
+                    <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
 
-  <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+                      <ol class="carousel-indicators ">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      </ol>
 
-    <ol class="carousel-indicators ">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    </ol>
+                    <div id="imageHeaderSlide" class="carousel-inner card-img-top card-img-bottom text-center">
+                      <img src="../images/load.gif" id="load" width="200px">
+                    </div>
 
-    <div id="imageHeaderSlide" class="carousel-inner card-img-top card-img-bottom text-center">
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
 
-        <img src="../images/load.gif" id="load" width="200px">
-    </div>
-
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-
-  </div>
-
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
 
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
-
-<!--======================================================================-->
-
-
-<div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-4 col-xlg-3 col-md-5">
-                        <!-- Column -->
-                        <div class="card">
-
-                            <img class="card-img-top" src="../assets/images/background/profile-bg.jpg" alt="Card image cap">
-                            <div class="card-body little-profile text-center">
-                                  <div class="card-block">
-                                <div class="pro-img"><img src="../images/logo-header.gif" alt="user"></div>
-                                <h3 class="m-b-0">สำนักวิชาเทคโนโลยีสังคม</h3>
-                                <p>สาขาวิชาเทคโนโลยีสารสนเทศ </p>
-                                <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-info btn-md btn-rounded"><i class="mdi mdi-facebook-box"></i> ติดตาม</a>
-                                <div class="row text-center m-t-20">
-
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">21</h3><small>ก่อตั้ง/ปี</small></div>
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">5</h3><small>หลักสูตร</small></div>
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">16</h3><small>คณาจารย์</small></div>
-
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-block">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">เกี่ยวกับสาขาวิชา</h4>
-                                <h6 class="card-subtitle text-center">ปรัชญาและวัตุประสงค์</h6> </div>
-                            <!-- ============================================================== -->
-                            <!-- Comment widgets -->
-                            <!-- ============================================================== -->
-                            <div class="comment-widgets">
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row">
-                                    <div class="p-2"><span class="round"><img src="../images/philosophy.png" alt="user" width="50"></span></div>
-                                    <div class="comment-text w-100">
-                                        <h5>ปรัชญา</h5>
-                                        <p class="m-b-5">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has beenorem Ipsum is simply dummy text of the printing and type setting industry.</p>
-                                        <div class="comment-footer"> <span class="text-muted pull-right">April 14, 2016</span> <span class="label label-info">Pending</span> <span class="action-icons">
-                                                    <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                    <a href="javascript:void(0)"><i class="ti-check"></i></a>
-                                                    <a href="javascript:void(0)"><i class="ti-heart"></i></a>
-                                                </span> </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row active">
-                                    <div class="p-2"><span class="round"><img src="../images/objective.png" alt="user" width="50"></span></div>
-                                    <div class="comment-text active w-100">
-                                        <h5>วัตถุประสงค์</h5>
-                                        <p class="m-b-5">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has beenorem Ipsum is simply dummy text of the printing and type setting industry..</p>
-                                        <div class="comment-footer "> <span class="text-muted pull-right">April 14, 2016</span> <span class="label label-light-success">Approved</span> <span class="action-icons active">
-                                                    <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                    <a href="javascript:void(0)"><i class="icon-close"></i></a>
-                                                    <a href="javascript:void(0)"><i class="ti-heart text-danger"></i></a>
-                                                </span> </div>
-                                    </div>
-                                </div>
+        </div>
 
 
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-<div class="card">
-  <div class="card-block">
-<div class="row el-element-overlay">
-                    <div class="col-md-12">
-
-                        <h2 class="card-title text-center"><i class="mdi mdi-school"></i> ระดับการศึกษา</h2>
-                        <h6 class="card-subtitle m-b-20 text-muted text-center">o o o</h6> </div>
-                    <div class="col-lg-4 col-md-8">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1"> <img id="imageBachelor"  src="../assets/images/users/1.jpg" alt="user">
-                                    <div class="el-overlay">
-                                        <ul class="el-info">
-                                            <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                            <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="el-card-content">
-                                    <h3 class="box-title">ปริญญาตรี</h3> <small>Managing Director</small>
-                                    <br> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-8">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1"> <img id="imageMaster" src="../assets/images/users/2.jpg" alt="user">
-                                    <div class="el-overlay">
-                                        <ul class="el-info">
-                                            <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                            <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="el-card-content">
-                                    <h3 class="box-title">ปริญญาโท</h3> <small>Managing Director</small>
-                                    <br> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-8">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1"> <img  id="imageDoctor" src="../assets/images/users/3.jpg" alt="user">
-                                    <div class="el-overlay">
-                                        <ul class="el-info">
-                                            <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                            <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="el-card-content">
-                                    <h3 class="box-title">ปริญญาเอก</h3> <small>Managing Director</small>
-                                    <br> </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-              </div>
-            </div>
-
-<!--============================ ข่าวสาร =================================-->
+        <div class="row">
+          <div class="col-lg-4 col-xlg-3 col-md-5">
             <div class="card">
-              <div class="card-header">
-                <h4 class="text-black card-title">ข่าวสาร</h4>
-              </div>
-
-              <hr>
-
-              <div class="card-block bg-info">
-                <h4 class="text-white card-title">ระดับปริญญาตรี</h4>
-                  <div class="message-box contact-box">
-                    <h2 class="add-ct-btn">
-                      <button type="button" id="btOpenModalBachelor" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">+</button>
-                    </h2>
-                  </div>
-              </div>
-
-              <div class="card-block ">
-                <div class="card">
+              <img class="card-img-top" src="../assets/images/background/profile-bg.jpg" alt="Card image cap">
+                <div class="card-body little-profile text-center">
                   <div class="card-block">
-                    <form class="form-horizontal form-material ">
-                      <div class="table-responsive">
-                          <table id="tableInfoBachelor" class="table text-center">
-                              <thead >
-                                  <tr >
-                                      <th class="text-center">รูปภาพ</th>
-                                      <th class="text-center">หัวข้อ</th>
-                                      <th class="text-center">ลิงค์</th>
-                                      <th class="text-center">จัดการ</th>
-                                  </tr>
-                                  <tr id="loaderInforBachelor">
-                                    <td colspan="4"><img src="../images/ajax-loader.gif">  กำลังโหลดข้อมูล...</td>
-                                  </tr>
-                              </thead>
-                              <tbody id="list_info_bachelor">
+                    <div class="pro-img"><img src="../images/logo-header.gif" alt="user"></div>
+                      <h3 class="m-b-0">สำนักวิชาเทคโนโลยีสังคม</h3>
+                      <p>สาขาวิชาเทคโนโลยีสารสนเทศ </p><br><br><br>
+                      <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-info btn-md btn-rounded"><i class="mdi mdi-facebook-box"></i> ติดตาม</a>
 
-                              </tbody>
-                          </table>
+                      <div class="row text-center m-t-20">
+                        <div class="col-lg-4 col-md-4 m-t-20">
+                          <h3 class="m-b-0 font-light">21</h3><small>ก่อตั้ง/ปี</small></div>
+                        <div class="col-lg-4 col-md-4 m-t-20">
+                          <h3 class="m-b-0 font-light">5</h3><small>หลักสูตร</small></div>
+                        <div class="col-lg-4 col-md-4 m-t-20">
+                          <h3 class="m-b-0 font-light">16</h3><small>คณาจารย์</small></div>
                       </div>
-                    </form>
+
                   </div>
                 </div>
-              </div>
-
-
-              <div class="card-block bg-info">
-                <h4 class="text-white card-title">ระดับบัณฑิตศึกษา</h4>
-                  <div class="message-box contact-box">
-                    <h2 class="add-ct-btn">
-                      <button type="button" id="btOpenModalGraduate" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">+</button>
-                    </h2>
-                  </div>
-              </div>
-
-              <div class="card-block ">
-                <div class="card">
-                  <div class="card-block">
-                    <form class="form-horizontal form-material ">
-                      <div class="table-responsive">
-                          <table id="tableInfoGraduate" class="table text-center">
-                              <thead >
-                                  <tr >
-                                      <th class="text-center">รูปภาพ</th>
-                                      <th class="text-center">หัวข้อ</th>
-                                      <th class="text-center">ลิงค์</th>
-                                      <th class="text-center">จัดการ</th>
-                                  </tr>
-                                  <tr id="loaderInforGraduate">
-                                    <td colspan="4"><img src="../images/ajax-loader.gif">  กำลังโหลดข้อมูล...</td>
-                                  </tr>
-                              </thead>
-                              <tbody id="list_info_graduate">
-
-                              </tbody>
-                          </table>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
             </div>
-<!--=====================================================================-->
+          </div>
+
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-block">
+
+                <div class="card-body">
+                  <h4 class="card-title text-center">เกี่ยวกับสาขาวิชา</h4>
+                  <h6 class="card-subtitle text-center">ปรัชญาและวัตุประสงค์</h6>
+               </div>
+
+               <div class="comment-widgets">
+
+                <div class="d-flex flex-row comment-row">
+
+                  <div class="p-2">
+                    <span class="round">
+                      <img src="../images/philosophy.png" alt="user" width="50">
+                    </span>
+                  </div>
+
+                  <div class="comment-text ">
+                   <h5>ปรัชญา</h5>
+                    <p id="philosophyBachelor"></p>
+                  </div>
+
+                </div>
+
+                <div class="d-flex flex-row comment-row ">
+
+                  <div class="p-2">
+                    <span class="round">
+                      <img src="../images/objective.png" alt="user" width="50">
+                    </span>
+                  </div>
+
+                  <div class="comment-text">
+                    <h5>วัตถุประสงค์</h5>
+                      <p id="purposeBachelor"></p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-            <footer class="footer">Copyright © Information Technology 2017</footer>
+      <div class="card">
+        <div class="card-block">
+          <div class="row el-element-overlay">
+
+            <div class="col-md-12">
+              <h2 class="card-title text-center"><i class="mdi mdi-school"></i> ระดับการศึกษา</h2>
+              <h6 class="card-subtitle m-b-20 text-muted text-center">o o o</h6>
+            </div>
+
+            <div class="col-lg-4 col-md-8">
+              <div class="card">
+                <div class="el-card-item">
+                  <div class="el-card-avatar el-overlay-1">
+                    <img id="imageBachelor"  src="../assets/images/users/1.jpg" alt="user">
+
+                    <div class="el-overlay">
+                      <ul class="el-info">
+                        <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
+                        <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                    <div class="el-card-content">
+                      <h3 class="box-title">ปริญญาตรี</h3> <small>Managing Director</small><br>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-8">
+              <div class="card">
+                <div class="el-card-item">
+                  <div class="el-card-avatar el-overlay-1">
+                    <img id="imageMaster" src="../assets/images/users/2.jpg" alt="user">
+
+                    <div class="el-overlay">
+                      <ul class="el-info">
+                        <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
+                        <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="el-card-content">
+                    <h3 class="box-title">ปริญญาโท</h3> <small>Managing Director</small><br>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-8">
+              <div class="card">
+                <div class="el-card-item">
+
+                  <div class="el-card-avatar el-overlay-1">
+                    <img  id="imageDoctor" src="../assets/images/users/3.jpg" alt="user">
+                      <div class="el-overlay">
+                        <ul class="el-info">
+                            <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
+                            <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="el-card-content">
+                      <h3 class="box-title">ปริญญาเอก</h3><small>Managing Director</small><br>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <div class="card card-white">
+            <div class="card-block">
+              <div class="card-body">
+
+                <div class="d-flex">
+                  <div class="m-r-20 align-self-center">
+                    <h1 class="text-black"><i class="ti-desktop"></i></h1>
+                  </div>
+                  <div>
+                    <h3 class="card-title">Enterprise Software</h3>
+                    <h6 class="card-subtitle">ซอฟต์แวร์วิสาหกิจ</h6>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <p>กระบวนการในการวิเคราะห์ ออกแบบ และพัฒนาซอฟต์แวร์ ด้วยภาษาการโปรแกรมรูปแบบต่าง ๆ
+                       ทั้งที่เป็นโปรแกรมประยุกต์บนเว็บ และบนอุปกรณ์เคลื่อนที่</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+                  <!-- Column -->
+                  <!-- Column -->
+                  <div class="card  card-white">
+                      <div class="card-block">
+                      <div class="card-body">
+                          <div class="d-flex">
+                              <div class="m-r-20 align-self-center">
+                                  <h1 class="text-black"><i class="ti-video-camera"></i></h1></div>
+                              <div>
+                                  <h3 class="card-title">Digital Media</h3>
+                                  <h6 class="card-subtitle">นิเทศศาสตร์ดิจิทัล</h6> </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-12">
+                                  <p>การคิดสร้างสรรค์ผลงานทางนิเทศศาสตร์แขนงต่าง ๆ ได้แก่ งานโฆษณาการประชาสัมพันธ์ออนไลน์ สื่อกราฟิก สื่อสิ่งพิมพ์ดิจิทัล เว็บไซต์ มัลติมีเดีย และแอนิเมชัน</p>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+
+                  <!-- Column -->
+              </div>
+
+                          <div class="col-lg-6 col-md-12">
+                              <!-- Column -->
+                              <div class="card card-white">
+                                <div class="card-block">
+                                  <div class="card-body">
+                                      <div class="d-flex">
+                                          <div class="m-r-20 align-self-center">
+                                              <h1 class="text-black"><i class="ti-book"></i></h1></div>
+                                          <div>
+                                              <h3 class="card-title">Information Studies</h3>
+                                              <h6 class="card-subtitle">สารสนเทศศึกษา</h6> </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-12">
+                                              <p>การจัดการทรัพยากรสารสนเทศ การกำหนด การสร้าง การคัดเลือก การจัดหา การวิเคราะห์  การจัดเก็บ  การบริการ การเผยแพร่และนำส่งสารสนเทศ  </p>
+                                          </div>
+
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                              <!-- Column -->
+                              <!-- Column -->
+                              <div class="card  card-white">
+                                <div class="card-block">
+                                  <div class="card-body">
+                                      <div class="d-flex">
+                                          <div class="m-r-20 align-self-center">
+                                              <h1 class="text-black"><i class="ti-pie-chart"></i></h1></div>
+                                          <div>
+                                              <h3 class="card-title">Business Intelligence and Data Analytics</h3>
+                                              <h6 class="card-subtitle">ธุรกิจอัจฉริยะและการวิเคราะห์ข้อมูล</h6> </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-12">
+                                          <p>กระบวนการในการวิเคราะห์ข้อมูลทางธุรกิจด้วยเทคนิคและโปรแกรมคอมพิวเตอร์ เพื่อใช้ประกอบการดำเนินกิจการ และเพิ่มประสิทธิภาพให้องค์การี่</p>
+
+
+                                        </div>
+
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                              <!-- Column -->
+                          </div>
+                      </div>
+
+      <div class="card">
+        <div class="card-block ">
+
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="card-title text-center">ข่าวสาร</h2>
+              <h6 class="card-subtitle m-b-20 text-muted text-center">o o o</h6>
+            </div>
+            <div class="col-lg-6">
+              <div class="card-block ">
+                <h4 class="card-title text-center">ปริญญาตรี</h4>
+
+                <div class="card">
+                  <div class="card-block ">
+                  <div id="carouselBachelor" class="carousel slide " data-ride="carousel">
+
+                    <ol class="carousel-indicators ">
+                      <li data-target="#carouselBachelor" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselBachelor" data-slide-to="1"></li>
+                    </ol>
+
+                    <div id="imageInfoBachelorSlide" class="carousel-inner card-img-top card-img-bottom text-center">
+
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselBachelor" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+
+                    <a class="carousel-control-next" href="#carouselBachelor" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card-block ">
+                <h4 class="card-title text-center">บัณฑิตศึกษา</h4>
+
+                <div class="card">
+                  <div class="card-block ">
+                  <div id="carouselGraduation" class="carousel slide " data-ride="carousel">
+                    <ol class="carousel-indicators ">
+                      <li data-target="#carouselGraduation" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselGraduation" data-slide-to="1"></li>
+                    </ol>
+
+                  <div id="imageInfoGraduationSlide" class="carousel-inner card-img-top card-img-bottom text-center">
+
+                  </div>
+
+                  <a class="carousel-control-prev" href="#carouselGraduation" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+
+                  <a class="carousel-control-next" href="#carouselGraduation" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="footer">
+
+    Copyright © Information Technology 2017
+  </footer>
         </div>
     </div>
 
