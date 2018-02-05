@@ -5561,7 +5561,7 @@ File: scss
   .comment-text.active .comment-footer .action-icons {
     visibility: visible; }
   .comment-text p {
-    max-height: 50px;
+    max-height: 150px;
     overflow: hidden; }
 
 .comment-footer .action-icons {

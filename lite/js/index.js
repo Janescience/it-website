@@ -46,4 +46,54 @@ dbImageDoctor.on('value',snap => {
   $('#imageDoctor').attr("src",snap.val());
 });
 
+
+var dbPhilosophyBachelor = firebase.database().ref('website/about/bachelor').child('philosophy');
+  dbPhilosophyBachelor.on('value',snap => {
+    $('#philosophyBachelor').text(snap.val());
+  });
+
+var dbPurposeBachelor = firebase.database().ref('website/about/bachelor').child('purpose');
+  dbPurposeBachelor.on('value',snap => {
+    $('#purposeBachelor').text(snap.val());
+  });
+var cout=0;
+
+var dbInfoBachelor = firebase.database().ref('website/index/info/infobachelor');
+
+dbInfoBachelor.on('child_added',snap=>{
+  var photo = snap.child('photo').val();
+  var topic = snap.child('topic').val();
+  var url = snap.child('url').val();
+
+  cout=cout+1;
+
+  if(cout==1){
+    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item active'+"' style='"+'height:300px'+"'><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+                              "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
+  }else{
+    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item'+"' style='"+'height:300px'+"'><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+                              "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
+  }
+
+});
+var num=0;
+var dbInfoGraduate = firebase.database().ref('website/index/info/infograduate');
+dbInfoGraduate.on('child_added',snap=>{
+  var photo = snap.child('photo').val();
+  var topic = snap.child('topic').val();
+  var url = snap.child('url').val();
+  num=num+1;
+
+  if(num==1){
+    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item active'+"' style='"+'height:300px'+"'><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+                              "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
+  }else{
+    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item'+"' style='"+'height:300px'+"'><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+                              "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
+  }
+});
+
+
+
+
 });
