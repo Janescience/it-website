@@ -9,6 +9,7 @@ $(document).ready(function(){
     messagingSenderId: "131587290108"
   };
   firebase.initializeApp(config);
+    $.LoadingOverlay("show");
   var i=0;
   var dbImgHeaderSlide = firebase.database().ref('website/index/header');
 dbImgHeaderSlide.on('child_added',snap=>{
@@ -28,6 +29,7 @@ dbImgHeaderSlide.on('child_added',snap=>{
     $('#imageHeaderSlide').append("<div class='"+'carousel-item'+"'><img class='"+'d-block w-100'+"' src='"+bg+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
                               "<h1 class='"+'text-white'+"'>"+topic+"</h1><h3 class='"+'text-white'+"'>"+detail+"</h3><a href='"+link+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>"+txt_bt+"</button></a></div></div>");
   }
+  $.LoadingOverlay("hide");
   $('#load').hide();
 });
 

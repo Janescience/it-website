@@ -33,7 +33,7 @@
                             </ul>
                         </li>
                         <li class="three-column">
-                            <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">คณาจารย์และบุคลากร</span></a>
+                            <a class="has-arrow" href="personal.php" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">คณาจารย์และบุคลากร</span></a>
 
                         </li>
 
@@ -53,4 +53,3 @@
             </div>
             <!-- End Sidebar scroll-->
         </aside>
-<div id="fb-root"></div>
