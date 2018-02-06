@@ -38,10 +38,10 @@
                         </li>
 
                         <li class="two-column">
-                            <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">นักศึกษา</span></a>
+                            <a class="has-arrow" href="student.php" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">นักศึกษา</span></a>
                             <ul aria-expanded="true" class="collapse">
-                                <li><a href="form-basic.html">ผลงานนักศึกษา</a></li>
-                                <li><a href="form-layout.html">ภาพกิจกรรมนักศึกษา</a></li>
+                                <li><a href="Portfolio.php">ผลงานนักศึกษา</a></li>
+                                <li><a href="form-layout.html">กิจกรรมนักศึกษา</a></li>
                             </ul>
                         </li>
 
