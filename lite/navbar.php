@@ -27,7 +27,7 @@
                         <li>
                             <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu">หลักสูตร</span></a>
                             <ul aria-expanded="true" class="collapse">
-                                <li><a href="app-calendar.html">ปริญญาตรี</a></li>
+                                <li><a href="bachelor.php">ปริญญาตรี</a></li>
                                 <li><a href="app-chat.html">ปริญญาโท</a></li>
                                 <li><a href="app-ticket.html">ปริญญาเอก</a></li>
                             </ul>
