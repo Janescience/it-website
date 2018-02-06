@@ -3,10 +3,13 @@
 <header class="topbar">
     <nav class="navbar top-navbar navbar-toggleable-md navbar-light " >
 
-            <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="index.php">
 
-            <span><img src="../images/logo-it.png"  width="400px"/></span>
- </a>
+        <span><img src="../images/bird_logo.png"  style="height:50px"/><img src="../images/logo-it.png"  style="height:50px"/></span>
+</a>
+
+
+
 
         <div class="navbar-collapse">
             <ul class="navbar-nav mr-auto mt-md-0">

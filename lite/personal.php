@@ -41,7 +41,7 @@ border-radius: 500px;
 
       <div class="row">
         <div class="section-title col-lg-12 col-md-12 ">
-          <h1 class="mb-4">คณาจารย์</h1><br>
+          <h1 class="mb-4"><i class="ti-user"></i> คณาจารย์</h1><br>
         </div>
       </div>
   <div class="row col-lg-12" id="list_teacher">
@@ -50,7 +50,7 @@ border-radius: 500px;
 
   <div class="row">
     <div class="section-title col-lg-12 col-md-10 ">
-      <h1 class="mb-4">เจ้าหน้าที่บริหารงานทั่วไป</h1><br>
+      <h1 class="mb-4"><i class="ti-user"></i> เจ้าหน้าที่บริหารงานทั่วไป</h1><br>
     </div>
   </div>
 
@@ -59,7 +59,7 @@ border-radius: 500px;
 
   <div class="row">
     <div class="section-title col-lg-12 col-md-10 ">
-      <h1 class="mb-4">ผู้ช่วยสอนและวิจัย</h1><br>
+      <h1 class="mb-4"><i class="ti-user"></i> ผู้ช่วยสอนและวิจัย</h1><br>
     </div>
   </div>
 
@@ -72,6 +72,7 @@ border-radius: 500px;
   </div>
   </div>
 </div>
+<?php include('footer.php')?>
 </div>
 </div>
 <footer class="footer">

@@ -72,7 +72,7 @@
                     <div class="pro-img"><img src="../images/logo-header.gif" alt="user"></div>
                       <h3 class="m-b-0">สำนักวิชาเทคโนโลยีสังคม</h3>
                       <p>สาขาวิชาเทคโนโลยีสารสนเทศ </p><br><br><br>
-                      <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-info btn-md btn-rounded"><i class="mdi mdi-facebook-box"></i> ติดตาม</a>
+                      <a href="https://www.facebook.com/ITSuranaree/" class="m-t-10 waves-effect waves-dark btn btn-info btn-md btn-rounded"><i class="mdi mdi-facebook-box"></i> ติดตาม</a>
 
                       <div class="row text-center m-t-20">
                         <div class="col-lg-4 col-md-4 m-t-20">
@@ -152,14 +152,13 @@
 
                     <div class="el-overlay">
                       <ul class="el-info">
-                        <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                        <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
+                        <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg">รายละเอียด</a></li>
                       </ul>
                     </div>
                   </div>
 
                     <div class="el-card-content">
-                      <h3 class="box-title">ปริญญาตรี</h3> <small>Managing Director</small><br>
+                      <h3 class="box-title">ปริญญาตรี</h3> <small>วิทยาการสารสนเทศบัณฑิต</small><br>
                     </div>
 
                 </div>
@@ -174,14 +173,13 @@
 
                     <div class="el-overlay">
                       <ul class="el-info">
-                        <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                        <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
+                        <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg">รายละเอียด</a></li>
                       </ul>
                     </div>
                   </div>
 
                   <div class="el-card-content">
-                    <h3 class="box-title">ปริญญาโท</h3> <small>Managing Director</small><br>
+                    <h3 class="box-title">ปริญญาโท</h3> <small>วิทยาการสารสนเทศมหาบัณฑิต</small><br>
                   </div>
                 </div>
               </div>
@@ -195,14 +193,14 @@
                     <img  id="imageDoctor" src="../assets/images/users/3.jpg" alt="user">
                       <div class="el-overlay">
                         <ul class="el-info">
-                            <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                            <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
+                            <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg">รายละเอียด</a></li>
+
                         </ul>
                       </div>
                     </div>
 
                     <div class="el-card-content">
-                      <h3 class="box-title">ปริญญาเอก</h3><small>Managing Director</small><br>
+                      <h3 class="box-title">ปริญญาเอก</h3><small>วิทยาการสารสนเทศดุษฎีบัณฑิต</small><br>
                     </div>
                 </div>
               </div>
@@ -390,8 +388,13 @@
         </div>
       </div>
     </div>
+<?php include('footer.php')?>
   </div>
+
 </div>
+
+
+
 
 
   <footer class="footer">

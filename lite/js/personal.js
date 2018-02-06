@@ -32,7 +32,9 @@ $('#printHisEducation').click(function () {
   doc.text(70,18,"INFORMATION OF TECHNOLOGY");
   doc.setFontSize(13);
   doc.text(0,20,"___________________________________________________________________________________________________________");
-    doc.fromHTML("EDUCATION HISTORY"+$('#hisEdu').html()+"EXPERTISE"+$('#expert').html(), 15, 30, {
+  doc.setFontSize(12);
+  doc.text(80,28,"HISTORY AND WORKING");
+    doc.fromHTML("EDUCATION HISTORY"+" "+$('#hisEdu').html()+"EXPERTISE"+" "+$('#expert').html(), 15, 30, {
         'width': 170,
             'elementHandlers': specialElementHandlers
     });
