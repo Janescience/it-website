@@ -120,13 +120,13 @@ rootRefBranch.on("child_added",snap => {
 
     /*------------------------  edit Dowload (2555) -----------------------------------*/
     var Download = topicRef.child("course/AddDownload").child('ปริญญาตรี').child(key);
-
+$('#Download_work').empty();
  Download.on("child_added",snap => {
    var snapkey = snap.key;
    var topic = snap.child('topic').val();
    var detail = snap.child('topic2').val();
    var file = snap.child('file').val();
-   $('#Download_work').empty();
+
 
    $('#Download_work').append(
 
