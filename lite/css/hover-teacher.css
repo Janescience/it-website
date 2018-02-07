@@ -1,14 +1,17 @@
 .hovereffect {
   width: 100%;
+  padding:10px;
   float: center;
   overflow: hidden;
   position: relative;
   text-align: center;
   cursor: default;
+  margin: auto;
 }
 
 .hovereffect .overlay {
-  width: 100%;
+  margin: auto;
+  width:100%;
   height: 100%;
   position: absolute;
   overflow: hidden;
@@ -24,7 +27,8 @@
   transform: scale(1.1);
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
-  left:20%;
+  margin: auto;
+
 }
 
 .hovereffect:hover img {

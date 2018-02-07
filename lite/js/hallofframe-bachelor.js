@@ -1,15 +1,5 @@
 $(document).ready(function(){
 
-  var config = {
-    apiKey: "AIzaSyA4WVo9ZjdTKHW1ALNRwbuoqx5uxP8gsWM",
-    authDomain: "itms-management-system.firebaseapp.com",
-    databaseURL: "https://itms-management-system.firebaseio.com",
-    projectId: "itms-management-system",
-    storageBucket: "itms-management-system.appspot.com",
-    messagingSenderId: "131587290108"
-  };
-
-    firebase.initializeApp(config);
 
   var portBecRef = firebase.database().ref("website/student/bechelor/portfolio");
 
@@ -25,20 +15,20 @@ $(document).ready(function(){
     var showStatus = snap.child("port_show_status").val();
 
 
-    if (showStatus == "checked"){
-    $('#showPort').append("<div  class='"+'col-lg-3 col-md-3 col-sm-4'+"'>"+
-        "<div class='"+'card'+"'>"+
+    if (Status == "Hall Of Fame" && showStatus == "checked"){
+    $('#showHall').append("<div  class='"+'col-xlg-4 col-lg-4 col-md-3 col-sm-6'+"'>"+
+        "<div class='"+'card card-warning'+"'>"+
             "<div  class='"+'el-card-item'+"'>"+
-                "<div class='"+'el-card-avatar el-overlay-1'+"'> <img src='"+Image+"' style='"+'height:200px'+"'  alt='"+'user'+"'>"+
+                "<div class='"+'el-card-avatar el-overlay-1'+"' style='"+'height:250px'+"'> <img src='"+Image+"'  alt='"+'user'+"'>"+
                     "<div class='"+'el-overlay scrl-up'+"'>"+
                         "<ul id='"+key+"' class='"+'el-info'+"'>"+
-                            "<li ><a class='"+'btn default btn-outline image-popup-vertical-fit detail'+"' ><i class='"+'icon-magnifier'+"'></i></a></li>"+
+                            "<li><a class='"+'btn default btn-outline image-popup-vertical-fit detail'+"' ><i class='"+'mdi mdi-comment'+"'></i></a></li>"+
                         "</ul>"+
                     "</div>"+
                 "</div>"+
                 "<div class='"+'el-card-content'+"'>"+
-                    "<h2 class='"+'box-title'+"'>"+Name+"</h2> <h5 class='"+'box-subtitle'+"'>"+Type+"</h5><h6>"+Year+"</h6> "+
-                    "<br> </div>"+
+                    "<h2 class='"+'box-title text-black'+"'><i class='"+'mdi mdi-seal'+"'></i> "+Name+"</h2>"+
+                    "</div>"+
             "</div>"+
         "</div>"+
     "</div>");
@@ -48,7 +38,7 @@ $(document).ready(function(){
   // ======================================================= End Code =======================================================
 
   // ======================================================= Port Detail =======================================================
-  $('#showPort').on('click','.detail',function(e){
+  $('#showHall').on('click','.detail',function(e){
 
     $('#namePort').val("");
     $('#portDetail').val("");
@@ -57,7 +47,7 @@ $(document).ready(function(){
     $('#portImage').empty();
 
 
-    $('#portfolioModal').modal("show");
+    $('#hallofframeModal').modal("show");
     var id = $(this).closest('ul').attr("id");
 
     var dbName = portBecRef.child(id).child('port_name');
@@ -91,7 +81,7 @@ $(document).ready(function(){
 
     var dbImage = portBecRef.child(id).child('port_image');
     dbImage.on('value',snap => {
-      $('#portImage').append("<img src='"+snap.val()+"'  style='"+'border-radius: 25px'+"' class='"+'col-md-12'+"' border='"+'2'+"'/>");
+      $('#portImage').append("<img src='"+snap.val()+"'  style='"+'border-radius: 10px'+"' width='"+'600px'+"'/>");
     });
 
     });
