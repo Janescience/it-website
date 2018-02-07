@@ -46,6 +46,7 @@ $(document).ready(function(){
 
       var rootRefBranch = topicRef.child("course/AddCourses").child('ปริญญาตรี').child(key);
 
+      $('#Studyplan').show();
       $('#branch').show();
       $('#download').show();
 
@@ -76,7 +77,7 @@ rootRefBranch.on("child_added",snap => {
          "</div>"+
        "</div>"+
 
-       "<div class='"+'col-lg-8'+"'>"+
+       "<div class='"+'col-lg-8 col-xlg-8'+"'>"+
         "<div class='"+'card'+"'>"+
             "<div class='"+'card-block'+"'>"+
                 "<div class='"+'card-body'+"'>"+
