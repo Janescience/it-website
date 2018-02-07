@@ -26,25 +26,29 @@
 
       <div class="page-wrapper">
         <div class="card-block">
-          <div class="row">
-          <div class="card col-xlg-12 col-lg-12 col-md-12 col-sm-12 card-dark">
+          <div class="card">
             <div class="card-block">
-              <h1 class="card-title text-center text-white"><i class="mdi mdi-trophy-award text-warning"></i> ผลงานระดับบัณฑิตศึกษา <i class="mdi mdi-trophy-award text-warning"></i> </h1>
+          <div class="row text-center">
+              <div class="card-block">
+          <div class="card col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
+            <div class="card-block">
+              <h1 class="card-title text-center "><i class="mdi mdi-trophy-award text-warning"></i> ผลงานระดับบัณฑิตศึกษา <i class="mdi mdi-trophy-award text-warning"></i> </h1>
             </div>
           </div>
+        </div>
         </div>
 
 
   <div class="row">
     <div class="col-xlg-12 col-lg-12 col-md-8">
       <div  class="row el-element-overlay">
-        <div class="card card-dark">
+
           <div class="card-block">
-            <h1 class="card-title text-center text-white"><i class="mdi mdi-trophy text-warning"></i><br>ผลงานดีเด่น</h1>
-            <h5 class="card-title text-center text-white">o o o</h5>
+            <h1 class="card-title text-center "><i class="mdi mdi-trophy text-warning"></i><br>ผลงานดีเด่น</h1>
+            <h5 class="card-title text-center ">o o o</h5>
           <div id="showHall"  class="row"></div>
           </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -53,21 +57,21 @@
           <div class="row">
             <div class="col-xlg-12 col-lg-12 col-md-8">
               <div  class="row el-element-overlay">
-                <div class="card card-dark">
+
                   <div class="card-block">
-                    <h2 class="card-title text-center text-white"><i class="mdi mdi-trophy-variant  text-white"></i><br> ผลงานทั่วไป</h2>
-                    <h5 class="card-title text-center text-white">o o o</h5>
+                    <h2 class="card-title text-center "><i class="mdi mdi-trophy-variant  "></i><br> ผลงานทั่วไป</h2>
+                    <h5 class="card-title text-center ">o o o</h5>
                   <div id="showPort"  class="row"></div>
                   </div>
-                </div>
+
               </div>
             </div>
           </div>
 
 
 
-
-
+</div>
+</div>
       </div>
 <?php include('footer.php')?>
             <footer class="footer">Copyright © Information Technology 2017</footer>
