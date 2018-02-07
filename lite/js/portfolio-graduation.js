@@ -11,10 +11,10 @@ $(document).ready(function(){
 
     firebase.initializeApp(config);
 
-  var portBecRef = firebase.database().ref("website/student/bechelor/portfolio");
+  var portGraRef = firebase.database().ref("website/student/graduate/portfolio");
 
 // ======================================================= Get Portfolio =======================================================
-  portBecRef.on("child_added",snap => {
+  portGraRef.on("child_added",snap => {
     var key = snap.key;
     var Name = snap.child("port_name").val();
     var Detail = snap.child("port_detail").val();
@@ -25,20 +25,20 @@ $(document).ready(function(){
     var showStatus = snap.child("port_show_status").val();
 
 
-    if (Status == "Hall Of Fame" && showStatus == "checked"){
+    if (showStatus == "checked"){
     $('#showPort').append("<div  class='"+'col-lg-3 col-md-3 col-sm-4'+"'>"+
         "<div class='"+'card'+"'>"+
             "<div  class='"+'el-card-item'+"'>"+
-                "<div class='"+'el-card-avatar el-overlay-1'+"'> <img src='"+Image+"' style='"+'height:200px'+"' alt='"+'user'+"'>"+
+                "<div class='"+'el-card-avatar el-overlay-1'+"'  style='"+'height:200px'+"'> <img src='"+Image+"'  alt='"+'user'+"'>"+
                     "<div class='"+'el-overlay scrl-up'+"'>"+
                         "<ul id='"+key+"' class='"+'el-info'+"'>"+
-                            "<li><a class='"+'btn default btn-outline image-popup-vertical-fit detail'+"' ><i class='"+'icon-magnifier'+"'></i></a></li>"+
+                            "<li ><a class='"+'btn default btn-outline image-popup-vertical-fit detail'+"' ><i class='"+'mdi mdi-comment'+"'></i></a></li>"+
                         "</ul>"+
                     "</div>"+
                 "</div>"+
                 "<div class='"+'el-card-content'+"'>"+
-                    "<h2 class='"+'box-title'+"'>"+Name+"</h2> <h5 class='"+'box-subtitle'+"'>"+Type+"</h5><h6>"+Year+"</h6> "+
-                    "<br> </div>"+
+                    "<h2 class='"+'box-title'+"'><i class='"+'mdi mdi-seal'+"'></i> "+Name+"</h2>"+
+                    "</div>"+
             "</div>"+
         "</div>"+
     "</div>");
@@ -54,44 +54,44 @@ $(document).ready(function(){
     $('#portDetail').val("");
     $('#portType').val("");
     $('#portYear').val("");
-    $('#portImage').empty();
+    $('#portfolioImage').empty();
 
 
     $('#portfolioModal').modal("show");
     var id = $(this).closest('ul').attr("id");
 
-    var dbName = portBecRef.child(id).child('port_name');
+    var dbName = portGraRef.child(id).child('port_name');
     dbName.on('value',snap => {
 
-      document.getElementById("namePort").innerHTML = snap.val();
+      document.getElementById("namePortfolio").innerHTML = snap.val();
 
       // $('#namePort').val(snap.val());
     });
 
-    var dbDetail = portBecRef.child(id).child('port_detail');
+    var dbDetail = portGraRef.child(id).child('port_detail');
     dbDetail.on('value',snap => {
-      document.getElementById("portDetail").innerHTML = snap.val();
+      document.getElementById("portfolioDetail").innerHTML = snap.val();
 
       // $('#portDetail').val(snap.val());
     });
 
-    var dbType = portBecRef.child(id).child('port_type');
+    var dbType = portGraRef.child(id).child('port_type');
     dbType.on('value',snap => {
-      document.getElementById("portType").innerHTML = snap.val();
+      document.getElementById("portfolioType").innerHTML = snap.val();
 
       // $('#portType').val(snap.val());
     });
 
-    var dbYear = portBecRef.child(id).child('port_years');
+    var dbYear = portGraRef.child(id).child('port_years');
     dbYear.on('value',snap => {
-      document.getElementById("portYear").innerHTML = snap.val();
+      document.getElementById("portfolioYear").innerHTML = snap.val();
 
       // $('#portYear').val(snap.val());
     });
 
-    var dbImage = portBecRef.child(id).child('port_image');
+    var dbImage = portGraRef.child(id).child('port_image');
     dbImage.on('value',snap => {
-      $('#portImage').append("<img src='"+snap.val()+"'  style='"+'border-radius: 25px'+"' class='"+'col-md-12'+"' border='"+'2'+"'/>");
+      $('#portfolioImage').append("<img src='"+snap.val()+"'  style='"+'border-radius: 25px'+"' class='"+'col-md-12'+"' border='"+'2'+"'/>");
     });
 
     });

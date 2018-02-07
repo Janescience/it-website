@@ -63,7 +63,7 @@ rootRefBranch.on("child_added",snap => {
 
 
  $('#Branch_work').append(
-     "<div class='"+'col-lg-4 col-xlg-3 col-md-5'+"' id='"+snap.key+"'>"+
+     "<div class='"+'col-lg-4 col-xlg-4 col-md-5'+"' id='"+snap.key+"'>"+
          "<div class='"+'card'+"'>"+
              "<img class='"+'card-img-top'+"' src='"+ img +"' alt='"+'Card image cap'+"' width='"+'100%'+"' >"+
              "<div class='"+'card-body little-profile text-center'+"'>"+

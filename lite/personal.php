@@ -33,9 +33,7 @@ border-radius: 500px;
     <?php  include('navbar.php') ?>
 
     <div class="page-wrapper">
-      <div class="container-fluid">
-
-
+      <div class="card-block">
           <div class="card">
             <div class="card-block">
 
@@ -72,9 +70,10 @@ border-radius: 500px;
   </div>
   </div>
 </div>
+
+</div>
+</div>
 <?php include('footer.php')?>
-</div>
-</div>
 <footer class="footer">
 
   Copyright © Information Technology 2017

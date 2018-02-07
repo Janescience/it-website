@@ -20,12 +20,11 @@
         <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
     </div>
 
-    <div id="main-wrapper">
 
     <?php  include('navbar.php') ?>
 
     <div class="page-wrapper">
-      <div class="container-fluid">
+      <div class="card-block">
         <div class="row page-titles"></div>
 
           <div class="row">
@@ -64,7 +63,7 @@
 
 
         <div class="row">
-          <div class="col-lg-4 col-xlg-3 col-md-5">
+          <div class="col-lg-3 col-xlg-3 col-md-5">
             <div class="card">
               <img class="card-img-top" src="../assets/images/background/profile-bg.jpg" alt="Card image cap">
                 <div class="card-body little-profile text-center">
@@ -88,7 +87,7 @@
             </div>
           </div>
 
-          <div class="col-lg-8">
+          <div class="col-lg-9">
             <div class="card">
               <div class="card-block">
 
@@ -387,12 +386,13 @@
 
         </div>
       </div>
-    </div>
-<?php include('footer.php')?>
-  </div>
 
+
+  </div>
 </div>
 
+
+<?php include('footer.php')?>
 
 
 

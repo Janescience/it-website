@@ -25,18 +25,7 @@
     <?php  include('navbar.php') ?>
 
       <div class="page-wrapper">
-        <div class="container-fluid">
-
-          <div class="row page-titles">
-
-
-
-          </div>
-
-
-
-
-
+        <div class="card-block">
 
 <!--============================ หลักสูตร =================================-->
 

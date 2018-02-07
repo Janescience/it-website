@@ -23,10 +23,10 @@ dbImgHeaderSlide.on('child_added',snap=>{
   i=i+1;
 
   if(i==1){
-    $('#imageHeaderSlide').append("<div class='"+'carousel-item active'+"'><img class='"+'d-block w-100'+"' src='"+bg+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#imageHeaderSlide').append("<div class='"+'carousel-item active'+"' style='"+'height:600px'+"'><img class='"+'d-block w-100'+"' src='"+bg+"' ><div class='"+'carousel-caption d-none d-md-block'+"'>"+
                               "<h1 class='"+'text-white'+"'>"+topic+"</h1><h3 class='"+'text-white'+"'>"+detail+"</h3><a href='"+link+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>"+txt_bt+"</button></a></div></div>");
   }else{
-    $('#imageHeaderSlide').append("<div class='"+'carousel-item'+"'><img class='"+'d-block w-100'+"' src='"+bg+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#imageHeaderSlide').append("<div class='"+'carousel-item'+"' style='"+'height:600px'+"'><img class='"+'d-block w-100'+"' src='"+bg+"' ><div class='"+'carousel-caption d-none d-md-block'+"'>"+
                               "<h1 class='"+'text-white'+"'>"+topic+"</h1><h3 class='"+'text-white'+"'>"+detail+"</h3><a href='"+link+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>"+txt_bt+"</button></a></div></div>");
   }
   $.LoadingOverlay("hide");
