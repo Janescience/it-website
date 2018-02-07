@@ -33,8 +33,8 @@
                             <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu">หลักสูตร</span></a>
                             <ul aria-expanded="true" class="collapse">
                                 <li><a href="course-bachelor.php">ปริญญาตรี</a></li>
-                                <li><a href="app-chat.html">ปริญญาโท</a></li>
-                                <li><a href="app-ticket.html">ปริญญาเอก</a></li>
+                                <li><a href="course-master.php">ปริญญาโท</a></li>
+                                <li><a href="course-doctorate.php">ปริญญาเอก</a></li>
                             </ul>
                         </li>
                         <li >

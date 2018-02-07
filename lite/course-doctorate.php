@@ -28,12 +28,13 @@
         <div class="card-block">
 
 <!--============================ หลักสูตร =================================-->
+
 <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12">
                         <div class="card">
                           <div class="card-body">
                               <br>
                               <h4 class="card-title text-center">หลักสูตร</h4>
-                              <h6 class="card-subtitle text-center" >ระดับปริญญาตรี </h6>
+                              <h6 class="card-subtitle text-center" >ระดับปริญญาเอก </h6>
 
 
                                 <div class="table-responsive m-t-20">
@@ -41,7 +42,6 @@
                                         <thead>
                                             <tr>
                                                 <th colspan="2">ชื่อหลักสูตร</th>
-                                                <th></th>
                                                 <th></th>
 
                                             </tr>
@@ -58,11 +58,7 @@
                             </div>
                         </div>
                     </div>
-
 </div>
-
-
-
 
 
 
@@ -92,11 +88,7 @@
         </div>
     </div>
 </div>
-
-
 </div>
-
-
 
 
 
@@ -127,7 +119,7 @@
             <div class="card-body">
 
                                 <p class="card-text">รูปแบบเอกสารเป็นไฟล์ PDF</p>
-                                <a class="btn btn-danger" id="downloadPlan">ดาวน์โหลด</a>
+                                <a href="javascript:void(0)" class="btn btn-danger" id="downloadPlan">ดาวน์โหลด</a>
                             </div>
 
 
@@ -165,7 +157,7 @@
 
 
     <?php include('import-javascript.php')?>
-    <script src="js/course-bachelor.js"></script>
+    <script src="js/course-doctorate.js"></script>
 </body>
 
 </html>
