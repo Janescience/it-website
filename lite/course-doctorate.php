@@ -64,7 +64,7 @@
 
 
 <!--============================ สาขาวิชา =================================-->
-<div class="col-lg-12" id="branch">
+<div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12" id="branch">
     <div class="card">
         <div class="card-block">
         <div class="card-body">
@@ -101,7 +101,7 @@
 <!--=====================================================================-->
 <!--============================ ดาวน์โหลด =================================-->
 
-<div class="col-lg-12" id="download">
+<div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12" id="download">
 
 
 

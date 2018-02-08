@@ -10,6 +10,20 @@
     <meta name="author" content="">
 
      <?php  include('header.php') ?>
+     <link href="css/hover-teacher.css" rel="stylesheet">
+     <link href="css/hover-staff.css" rel="stylesheet">
+
+     <style>
+
+.avatar {
+width:200px;
+margin: 10px;
+border-radius: 500px;
+-webkit-border-radius: 500px;
+-moz-border-radius: 500px;
+}
+
+</style>
 
 </head>
 
@@ -68,7 +82,7 @@
 
 
 <!--============================ สาขาวิชา =================================-->
-<div class="col-lg-12" id="branch">
+<div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12" id="branch">
     <div class="card">
         <div class="card-block">
         <div class="card-body">
@@ -98,18 +112,13 @@
 
 
 
-
-
-
-
-
 <!--=====================================================================-->
 <!--============================ รายวิชา =================================-->
 
 <!--=====================================================================-->
 <!--============================ ดาวน์โหลด =================================-->
 
-<div class="col-lg-12" id="download">
+<div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12" id="download">
 
 
 
@@ -146,16 +155,23 @@
 
         </div>
     </div>
+
 </div>
+
+<br>
 </div>
 
 <!--=====================================================================-->
 
 
+<?php include('footer.php')?>
           </div>
         </div>
       </div>
-      <?php include('footer.php')?>
+
+
+
+
 
             <footer class="footer">Copyright © Information Technology 2017</footer>
         </div>
