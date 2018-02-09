@@ -17,6 +17,7 @@ $(document).ready(function(){
   var topicRef = dbRef.ref('website')
   var i=0;
 
+  $.LoadingOverlay("show");
   $('#Studyplan').hide();
   $('#branch').hide();
   $('#download').hide();
@@ -40,6 +41,7 @@ $(document).ready(function(){
       "</tr>"
         );
                                   $('#loaderHeader2').hide();
+                                  $.LoadingOverlay("hide");
 
     });
 
@@ -160,7 +162,7 @@ $('#Download_work').empty();
                                        "<div class='"+'col-4 align-self-center'+"'>"+
                                        "</div>"+
                                        "<div class='"+'col-8 p-t-10 p-b-10 text-right'+"'>"+
-                                           "<div class='"+'spark-count'+"' style='"+'height:25px'+"'><a href='"+ file +"'><button type='"+'button'+"'  class='"+'btn waves-effect waves-light btn-info'+"'>ดาวน์โหลด</button></a></div>"+
+                                           "<div class='"+'spark-count'+"' style='"+'height:25px'+"'><a href='"+ file +"' target='"+'_blank'+"'><button type='"+'button'+"'  class='"+'btn waves-effect waves-light btn-info'+"'>ดาวน์โหลด</button></a></div>"+
 
                                            "</div>"+
                                        "</div>"+

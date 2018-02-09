@@ -119,7 +119,7 @@
             <div class="card-body">
 
                                 <p class="card-text">รูปแบบเอกสารเป็นไฟล์ PDF</p>
-                                <a href="javascript:void(0)" class="btn btn-danger" id="downloadPlan">ดาวน์โหลด</a>
+                                <a href="javascript:void(0)" class="btn btn-danger" id="downloadPlan" target="_blank">ดาวน์โหลด</a>
                             </div>
 
 
