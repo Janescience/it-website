@@ -35,13 +35,11 @@
 
                     <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
 
-                      <ol class="carousel-indicators ">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <ol class="carousel-indicators" id="carouselCount">
+
                       </ol>
 
                     <div id="imageHeaderSlide" class="carousel-inner card-img-top card-img-bottom text-center">
-                      <img src="../images/load.gif" id="load" width="200px">
                     </div>
 
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -108,7 +106,7 @@
 
                   <div class="comment-text ">
                    <h5>ปรัชญา</h5>
-                    <p id="philosophyBachelor"></p>
+                    <p id="philosophy"></p>
                   </div>
 
                 </div>
@@ -123,7 +121,7 @@
 
                   <div class="comment-text">
                     <h5>วัตถุประสงค์</h5>
-                      <p id="purposeBachelor"></p>
+                      <p id="purpose"></p>
                   </div>
 
                 </div>
@@ -147,7 +145,7 @@
               <div class="card">
                 <div class="el-card-item">
                   <div class="el-card-avatar el-overlay-1">
-                    <img id="imageBachelor"  src="../assets/images/users/1.jpg" alt="user">
+                    <img id="imageBachelor"   alt="user">
 
                     <div class="el-overlay">
                       <ul class="el-info">
@@ -168,7 +166,7 @@
               <div class="card">
                 <div class="el-card-item">
                   <div class="el-card-avatar el-overlay-1">
-                    <img id="imageMaster" src="../assets/images/users/2.jpg" alt="user">
+                    <img id="imageMaster"  alt="user">
 
                     <div class="el-overlay">
                       <ul class="el-info">
@@ -189,7 +187,7 @@
                 <div class="el-card-item">
 
                   <div class="el-card-avatar el-overlay-1">
-                    <img  id="imageDoctor" src="../assets/images/users/3.jpg" alt="user">
+                    <img  id="imageDoctor"  alt="user">
                       <div class="el-overlay">
                         <ul class="el-info">
                             <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg">รายละเอียด</a></li>
@@ -326,9 +324,8 @@
                   <div class="card-block ">
                   <div id="carouselBachelor" class="carousel slide " data-ride="carousel">
 
-                    <ol class="carousel-indicators ">
-                      <li data-target="#carouselBachelor" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselBachelor" data-slide-to="1"></li>
+                    <ol class="carousel-indicators" id="carouselInfoBachelor">
+
                     </ol>
 
                     <div id="imageInfoBachelorSlide" class="carousel-inner card-img-top card-img-bottom text-center">
@@ -358,9 +355,8 @@
                 <div class="card">
                   <div class="card-block ">
                   <div id="carouselGraduation" class="carousel slide " data-ride="carousel">
-                    <ol class="carousel-indicators ">
-                      <li data-target="#carouselGraduation" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselGraduation" data-slide-to="1"></li>
+                    <ol class="carousel-indicators" id="carouselInfoGraduate">
+
                     </ol>
 
                   <div id="imageInfoGraduationSlide" class="carousel-inner card-img-top card-img-bottom text-center">

@@ -20,17 +20,17 @@ dbImgHeaderSlide.on('child_added',snap=>{
   var link = snap.child('link').val();
   var txt_bt = snap.child('txt_bt').val();
 
-  i=i+1;
-
-  if(i==1){
-    $('#imageHeaderSlide').append("<div class='"+'carousel-item active'+"' style='"+'height:600px'+"'><img class='"+'d-block w-100'+"' src='"+bg+"' ><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+  if(i==0){
+    $('#carouselCount').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+i+"' class='"+'active'+"'></li>");
+    $('#imageHeaderSlide').append("<div class='"+'carousel-item active'+"' ><img class='"+'d-block w-100'+"' src='"+bg+"' ><div class='"+'carousel-caption d-none d-md-block'+"'>"+
                               "<h1 class='"+'text-white'+"'>"+topic+"</h1><h3 class='"+'text-white'+"'>"+detail+"</h3><a href='"+link+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>"+txt_bt+"</button></a></div></div>");
   }else{
-    $('#imageHeaderSlide').append("<div class='"+'carousel-item'+"' style='"+'height:600px'+"'><img class='"+'d-block w-100'+"' src='"+bg+"' ><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#carouselCount').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+i+"'></li>");
+    $('#imageHeaderSlide').append("<div class='"+'carousel-item'+"'><img class='"+'d-block w-100'+"'  src='"+bg+"' ><div class='"+'carousel-caption d-none d-md-block'+"'>"+
                               "<h1 class='"+'text-white'+"'>"+topic+"</h1><h3 class='"+'text-white'+"'>"+detail+"</h3><a href='"+link+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>"+txt_bt+"</button></a></div></div>");
   }
   $.LoadingOverlay("hide");
-  $('#load').hide();
+  i=i+1;
 });
 
 var dbImgBachelor = firebase.database().ref('website/index/courseoffered').child('imageBachelor');
@@ -49,14 +49,17 @@ dbImageDoctor.on('value',snap => {
 });
 
 
-var dbPhilosophyBachelor = firebase.database().ref('website/about/bachelor').child('philosophy');
+var dbPhilosophyBachelor = firebase.database().ref('website/index/about').child('philosophy');
   dbPhilosophyBachelor.on('value',snap => {
-    $('#philosophyBachelor').text(snap.val());
+    $('#philosophy').text(snap.val());
   });
+var n=0;
+var dbPurposeBachelor = firebase.database().ref('website/index/about/purpose');
+  dbPurposeBachelor.on('child_added',snap => {
+    var purpose = snap.child('purpose').val();
+    n=n+1;
+    $('#purpose').append(""+n+"."+purpose+"<br>");
 
-var dbPurposeBachelor = firebase.database().ref('website/about/bachelor').child('purpose');
-  dbPurposeBachelor.on('value',snap => {
-    $('#purposeBachelor').text(snap.val());
   });
 var cout=0;
 
@@ -67,16 +70,16 @@ dbInfoBachelor.on('child_added',snap=>{
   var topic = snap.child('topic').val();
   var url = snap.child('url').val();
 
-  cout=cout+1;
-
-  if(cout==1){
-    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item active'+"' style='"+'height:300px'+"'><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+  if(cout==0){
+    $('#carouselInfoBachelor').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+cout+"' class='"+'active'+"'></li>");
+    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item active'+"' ><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
                               "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }else{
-    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item'+"' style='"+'height:300px'+"'><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#carouselInfoBachelor').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+cout+"' ></li>");
+    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item'+"' ><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
                               "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }
-
+    cout=cout+1;
 });
 var num=0;
 var dbInfoGraduate = firebase.database().ref('website/index/info/infograduate');
@@ -84,15 +87,18 @@ dbInfoGraduate.on('child_added',snap=>{
   var photo = snap.child('photo').val();
   var topic = snap.child('topic').val();
   var url = snap.child('url').val();
-  num=num+1;
 
-  if(num==1){
-    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item active'+"' style='"+'height:300px'+"'><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+  if(num==0){
+    $('#carouselInfoGraduate').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+num+"' class='"+'active'+"'></li>");
+    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item active'+"' ><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
                               "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }else{
-    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item'+"' style='"+'height:300px'+"'><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#carouselInfoGraduate').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+num+"' v></li>");
+    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item'+"'><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
                               "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }
+  num=num+1;
+
 });
 
 

@@ -53,6 +53,18 @@ $(document).ready(function(){
       window.open("http://localhost:88/it-website/lite/detail-activity-bachelor.php");
     });
 
+    $('#showActivityBachelor').on('click','.video',function(){
+      $('#list_video').empty();
+      var id = $(this).closest('div').attr('id');
+      $('#showVideoModal').modal('show');
+      var videoBecRef = firebase.database().ref("website/student/bechelor/activity").child(id).child('activity_video');
+      videoBecRef.on("child_added",snap => {
+        var video = snap.child('videos').val();
+        $('#list_video').append("<div class='"+'col-xlg-6 col-lg-6 col-sm-12 col-md-12'+"'><video style='"+'border-radius:10px'+"'width='"+'370px'+"' controls><source src='"+video+"' type='"+'video/WebM'+"'></video></div>");
+      });
+
+    });
+
 
     var activityGraRef = firebase.database().ref("website/student/graduate/activity");
 
