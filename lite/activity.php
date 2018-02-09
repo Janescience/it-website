@@ -65,5 +65,25 @@
     <?php include('import-javascript.php')?>
     <script src="js/activity.js"></script>
 
+    <!--==================================== Show Video ====================================================-->
+
+    <div class="modal fade" id="showVideoModal" role="dialog" aria-labelledby="Message" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header  bg-black">
+            <h4 class="modal-title" >วิดีโอ</h4>
+          </div>
+          <div class="modal-body bg-black">
+
+            <div id="list_video" class="row">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--===========================================================================================================-->
+
 </body>
 </html>

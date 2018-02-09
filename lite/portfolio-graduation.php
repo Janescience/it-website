@@ -73,9 +73,10 @@
 </div>
 </div>
       </div>
-<?php include('footer.php')?>
-            <footer class="footer">Copyright © Information Technology 2017</footer>
+
         </div>
+        <?php include('footer.php')?>
+                    <footer class="footer">Copyright © Information Technology 2017</footer>
     </div>
 
     <?php include('import-javascript.php')?>

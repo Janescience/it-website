@@ -165,7 +165,8 @@ $('#list_teacher').on('click','.subject',function(){
 
 $('#list_teacher').on('click','.graduationCap',function(){
   var id = $(this).closest('p').attr('id');
-
+  $('#workTeacher').show();
+  $('#workPerson').hide();
   $('#hisEdu').empty();
   $('#expert').empty();
   $('#hisWork').empty();
@@ -402,18 +403,14 @@ rootRefUser.on("child_added",snap => {
 
 $('#list_admin').on('click','.info',function(){
   var id = $(this).closest('div').attr('id');
-
+  $('#workTeacher').hide();
+  $('#workPerson').show();
   $('#hisEdu').empty();
   $('#expert').empty();
   $('#hisWork').empty();
   $('#exp').empty();
-  $('#inter_work').empty();
-  $('#nation_work').empty();
-  $('#inter_conference').empty();
-  $('#nation_conference').empty();
-  $('#inter_journal_in_database').empty();
-  $('#inter_journal_not_database').empty();
-  $('#nation_journal').empty();
+  $('#person_work').empty();
+
 
   var rootRefEducation = usersRef.child(id).child('education').child('his_education');
   rootRefEducation.on("child_added",snap => {
@@ -462,12 +459,16 @@ $('#list_admin').on('click','.info',function(){
   }
   });
 
-
     var rootRefAcademicWork = usersRef.child(id).child('academic_work').child('portfolio');
     rootRefAcademicWork.on("child_added",snap => {
-
+      var name_award = snap.child("name_award").val();
+      var name_work = snap.child("name_work").val();
+      var detail = snap.child("detail").val();
+      var department = snap.child("department").val();
+      var date = snap.child("date").val();
+      var status = snap.child("status").val();
       if(status == "checked"){
-
+        $('#person_work').append("<li>"+name_award+" , "+name_work+" , "+detail+" , "+department+" , "+date+"</li>");
     }
     });
 
@@ -508,18 +509,14 @@ rootRefUser.on("child_added",snap => {
 
 $('#list_ta').on('click','.info',function(){
   var id = $(this).closest('div').attr('id');
-
+  $('#workTeacher').hide();
+  $('#workPerson').show();
   $('#hisEdu').empty();
   $('#expert').empty();
   $('#hisWork').empty();
   $('#exp').empty();
-  $('#inter_work').empty();
-  $('#nation_work').empty();
-  $('#inter_conference').empty();
-  $('#nation_conference').empty();
-  $('#inter_journal_in_database').empty();
-  $('#inter_journal_not_database').empty();
-  $('#nation_journal').empty();
+  $('#person_work').empty();
+
 
   var rootRefEducation = usersRef.child(id).child('education').child('his_education');
   rootRefEducation.on("child_added",snap => {
@@ -568,15 +565,18 @@ $('#list_ta').on('click','.info',function(){
   });
 
 
-    var rootRefAcademicWork = usersRef.child(id).child('academic_work').child('portfolio');
-    rootRefAcademicWork.on("child_added",snap => {
-
-
-      if(status == "checked"){
-
-     }
-
-    });
+  var rootRefAcademicWork = usersRef.child(id).child('academic_work').child('portfolio');
+  rootRefAcademicWork.on("child_added",snap => {
+    var name_award = snap.child("name_award").val();
+    var name_work = snap.child("name_work").val();
+    var detail = snap.child("detail").val();
+    var department = snap.child("department").val();
+    var date = snap.child("date").val();
+    var status = snap.child("status").val();
+    if(status == "checked"){
+      $('#person_work').append("<li>"+name_award+" , "+name_work+" , "+detail+" , "+department+" , "+date+"</li>");
+  }
+  });
 
 
   $('#hisandworkModal').modal('show');

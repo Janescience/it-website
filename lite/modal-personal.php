@@ -5,7 +5,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" >_เวลาที่สามารถเข้าพบได้</h4>
+        <h4 class="modal-title" >เวลาที่สามารถเข้าพบได้</h4>
       </div>
       <div class="modal-body">
         <div class="card-block">
@@ -102,18 +102,19 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="nameTeacherHeader">ประวัติและผลงาน <button id="printAll" class="btn btn-info " ><i class="fa fa-print"></i></button></h4>
+        <h4 class="modal-title" id="nameTeacherHeader">ประวัติและผลงาน <button id="printAll" class="btn btn-info " ><i class="mdi mdi-file-pdf"></i></button></h4>
       </div>
       <div class="modal-body">
 
           <ul class="nav nav-tabs" role="tablist">
             <li  class="nav-item "><a class="nav-link active" href="#personalexp"   data-toggle="tab"> <h5>ประวัติการศึกษา</h5></a></li>
             <li  class="nav-item"><a class="nav-link" href="#worpexp"   data-toggle="tab"><h5>ประวัติการทำงาน</h5></a></li>
-            <li  class="nav-item"><a class="nav-link" href="#papers"  r data-toggle="tab"><h5>ผลงานวิชาการ</h5></a></li>
+            <li id="workTeacher" class="nav-item"><a class="nav-link" href="#papers"  r data-toggle="tab"><h5>ผลงานวิชาการ</h5></a></li>
+            <li id="workPerson" class="nav-item"><a class="nav-link" href="#personWork"  r data-toggle="tab"><h5>ผลงานวิชาการ</h5></a></li>
           </ul>
           <div class="tab-content" style="text-align:left;">
             <div  class="container tab-pane active" id="personalexp"><br>
-              <button id="printHisEducation" class="btn btn-ligth" ><i class="fa fa-print"></i></button>
+              <button id="printHisEducation" class="btn btn-ligth" ><i class="mdi mdi-file-pdf"></i></button>
             <p><strong><u><h5>ประวัติการศึกษา</h5></u></strong></p>
             <ul id="hisEdu">
 
@@ -125,7 +126,7 @@
 
             </div>
             <div  class="container tab-pane" id="worpexp"><br>
-              <button id="printHisWork" class="btn btn-ligth " ><i class="fa fa-print"></i></button>
+              <button id="printHisWork" class="btn btn-ligth " ><i class="mdi mdi-file-pdf"></i></button>
 
               <p><strong><u><h5>ประวัติการทำงาน</h5></u></strong></p>
               <ul id="hisWork">
@@ -137,7 +138,7 @@
               </ul>
             </div>
             <div class="container tab-pane" id="papers"><br>
-              <button id="printHisAcademicWork" class="btn btn-ligth"><i class="fa fa-print"></i></button>
+              <button id="printHisAcademicWork" class="btn btn-ligth"><i class="mdi mdi-file-pdf"></i></button>
 
               <p><strong><u><h5>ผลงานวิชาการ</h5></u></strong></p>
               <p><strong><h6>วารสารระดับชาติที่อยู่ในฐานข้อมูลสากล</h6></strong></p>
@@ -168,6 +169,15 @@
 
               </ul>
             </div>
+            <div class="container tab-pane" id="personWork"><br>
+              <button id="printHisAcademicWork" class="btn btn-ligth"><i class="mdi mdi-file-pdf"></i></button>
+
+              <p><strong><u><h5>ผลงานวิชาการ</h5></u></strong></p>
+              <ul id="person_work">
+
+              </ul>
+
+            </div>
             <div id="print"></div>
       </div>
     </div>
@@ -192,10 +202,10 @@
         <table class="table">
           <thead>
             <tr>
-              <th class="text-center">ภาคการศึกษา</th>
-              <th class="text-center">รหัสวิชา</th>
-              <th class="text-center">ชื่อวิชา</th>
-              <th class="text-center">หน่วยกิต</th>
+              <th class="text-center"><h6>ภาคการศึกษา</h6></th>
+              <th class="text-center"><h6>รหัสวิชา</h6></th>
+              <th class="text-center"><h6>ชื่อวิชา</h6></th>
+              <th class="text-center"><h6>หน่วยกิต</h6></th>
               <tr>
           </thead>
           <tbody id="list_subject">

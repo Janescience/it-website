@@ -28,17 +28,15 @@
         <div class="card-block">
         <div class="card">
           <div class="card-block">
-
-          <div class="row text-center">
+            <div class="row text-center">
                 <div class="card-block">
-          <div class="card col-xlg-12 col-lg-4 col-md-4 col-sm-4 ">
-            <div class="card-block">
-              <h1 class="card-title text-center"><i class="mdi mdi-trophy-award text-warning"></i> ผลงานระดับปริญญาตรี <i class="mdi mdi-trophy-award text-warning"></i> </h1>
+            <div class="card col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
+              <div class="card-block">
+                <h1 class="card-title text-center "><i class="mdi mdi-trophy-award text-warning"></i> ผลงานระดับปริญญาตรี <i class="mdi mdi-trophy-award text-warning"></i> </h1>
+              </div>
             </div>
           </div>
-        </div>
-
-        </div>
+          </div>
 
 
 
@@ -73,10 +71,11 @@
 
         </div>
         </div>
+
+        </div>
       </div>
 <?php include('footer.php')?>
             <footer class="footer">Copyright © Information Technology 2017</footer>
-        </div>
     </div>
 
     <?php include('import-javascript.php')?>
