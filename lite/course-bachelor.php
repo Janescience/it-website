@@ -164,7 +164,7 @@ border-radius: 500px;
 <!--=====================================================================-->
 
 
-<?php include('footer.php')?>
+
           </div>
         </div>
       </div>
@@ -172,7 +172,7 @@ border-radius: 500px;
 
 
 
-
+      <?php include('footer.php')?>
             <footer class="footer">Copyright © Information Technology 2017</footer>
         </div>
     </div>
