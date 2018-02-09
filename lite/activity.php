@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:url"           content="http://it2.sut.ac.th/prj60_g7/it-website/lite/activity.php" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Your Website Title" />
-    <meta property="og:description"   content="Your description" />
-    <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+    <meta property="og:title"         content="กิจกรรมนักศึกษา" />
+    <meta property="og:description"   content="สาขาวิชาเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีสุรนารี" />
+    <meta property="og:image"         content="http://it2.sut.ac.th/prj60_g7/it-website/images/img1.png" />
 
      <?php  include('header.php') ?>
 
@@ -46,6 +46,10 @@
           <div class="card text-center">
             <div class="card-block">
               <h1>กิจกรรมของนักศึกษา</h1>
+
+              <div class="fb-share-button" data-href="http://it2.sut.ac.th/prj60_g7/it-website/lite/activity.php" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a></div>
+
             </div>
           </div>
         </div>

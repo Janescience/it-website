@@ -146,12 +146,13 @@
 
           </div>
         </div>
-      </div>
-      <?php include('footer.php')?>
+        
+        <div class="card">
 
-            <footer class="footer">Copyright © Information Technology 2017</footer>
+          <?php include('footer.php')?>
+          <footer class="footer">Copyright © Information Technology 2017</footer>
+
         </div>
-    </div>
 
 
 

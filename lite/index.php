@@ -69,7 +69,8 @@
                     <div class="pro-img"><img src="../images/logo-header.gif" alt="user"></div>
                       <h3 class="m-b-0">สำนักวิชาเทคโนโลยีสังคม</h3>
                       <p>สาขาวิชาเทคโนโลยีสารสนเทศ </p><br><br><br>
-                      <a href="https://www.facebook.com/ITSuranaree/" class="m-t-10 waves-effect waves-dark btn btn-info btn-md btn-rounded"><i class="mdi mdi-facebook-box"></i> ติดตาม</a>
+                      <a href="https://www.facebook.com/ITSuranaree/" class="m-t-10 waves-effect waves-dark btn btn-info btn-md btn-rounded">
+                      <i class="mdi mdi-facebook-box"></i> ติดตาม</a>
 
                       <div class="row text-center m-t-20">
                         <div class="col-lg-4 col-md-4 m-t-20">
