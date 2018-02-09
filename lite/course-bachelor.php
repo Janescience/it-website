@@ -93,6 +93,7 @@ border-radius: 500px;
           <br>
             <h4 class="card-title text-center">กลุ่มวิชาที่เปิดสอน</h4>
             <h6 class="card-subtitle text-center" id="TitleStudyplan"></h6> </div>
+            
 
         <div class="comment-widgets">
           <div class="row" id="Branch_work">
@@ -100,6 +101,7 @@ border-radius: 500px;
 
 
                 </div>
+
 
 
 
@@ -136,7 +138,7 @@ border-radius: 500px;
             <div class="card-body">
 
                                 <p class="card-text">รูปแบบเอกสารเป็นไฟล์ PDF</p>
-                                <a class="btn btn-danger" id="downloadPlan">ดาวน์โหลด</a>
+                                <a class="btn btn-danger" id="downloadPlan" target="_blank">ดาวน์โหลด</a>
                             </div>
 
 

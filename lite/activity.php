@@ -8,12 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Your Website Title" />
+    <meta property="og:description"   content="Your description" />
+    <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
 
      <?php  include('header.php') ?>
 
 </head>
 
 <body class="fix-header fix-sidebar card-no-border logo-center">
+
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v2.12";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="preloader">
       <svg class="circular" viewBox="25 25 50 50">
@@ -53,6 +66,7 @@
             </div>
           </div>
         </div>
+
 
 
         </div>

@@ -50,7 +50,7 @@ $(document).ready(function(){
     $('#showActivityBachelor').on('click','.image',function(){
       var id = $(this).closest('div').attr('id');
       sessionStorage.setItem("activityId",id);
-      window.open("http://localhost:88/it-website/lite/detail-activity-bachelor.php");
+      window.open("http://localhost/it-website/lite/detail-activity-bachelor.php");
     });
 
     $('#showActivityBachelor').on('click','.video',function(){
@@ -83,7 +83,7 @@ $(document).ready(function(){
               "<div  class='"+'el-card-item'+"'>"+
                   "<div class='"+'el-card-content'+"'>"+
                       "<h3 class='"+'box-title text-center'+"'><i class='"+'mdi mdi-lightbulb-on'+"'></i><br>"+key+"</h3>"+
-                      "<p class='"+'box-title text-center'+"'>"+detail+"</p><br><br>"+
+                      "<p class='"+'box-title text-center'+"'>"+detail+"</p><br><br>"+                      
                       "<h6 class='"+'text-center'+"'><i class='"+'mdi mdi-calendar-clock'+"'></i> "+dateStart+" - "+dateEnd+"</h6><br>"+
                       "</div>"+
 
@@ -103,7 +103,7 @@ $(document).ready(function(){
     $('#showActivityGraduation').on('click','.image',function(){
       var id = $(this).closest('div').attr('id');
       sessionStorage.setItem("activityId",id);
-      window.open("http://localhost:88/it-website/lite/detail-activity-graduate.php");
+      window.open("http://localhost/it-website/lite/detail-activity-graduate.php");
     });
 
 
