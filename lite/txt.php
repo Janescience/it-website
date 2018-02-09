@@ -45,24 +45,27 @@
                         </li>
 
                         <li>
-                            <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">ผลงานนักศึกษา</span></a>
-
-                                    <ul aria-expanded="true" class="collapse">
+                            <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">นักศึกษา</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li>
+                                    <a class="has-arrow " href="#" aria-expanded="false">ผลงานนักศึกษา</a>
+                                    <ul aria-expanded="false" class="collapse">
                                       <li><a href="portfolio-bachelor.php">ระดับปริญญาตรี</a></li>
                                       <li><a href="portfolio-graduation.php">ระดับบัณฑิตศึกษา</a></li>
                                     </ul>
+                                </li>
+                                <li>
+                                    <a  href="activity.php" aria-expanded="false">กิจกรรมนักศึกษา</a>
 
-
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <a  href="activity.php" aria-expanded="false"><i class="mdi mdi-camera"></i>กิจกรรมนักศึกษา</a>
-                        </li>
-
-
-
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->
         </aside>
+
+
+        

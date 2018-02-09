@@ -9,6 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+
+
      <?php  include('header.php') ?>
      <link href="css/hover-teacher.css" rel="stylesheet">
      <link href="css/hover-staff.css" rel="stylesheet">
@@ -93,7 +95,7 @@ border-radius: 500px;
           <br>
             <h4 class="card-title text-center">กลุ่มวิชาที่เปิดสอน</h4>
             <h6 class="card-subtitle text-center" id="TitleStudyplan"></h6> </div>
-            
+
 
         <div class="comment-widgets">
           <div class="row" id="Branch_work">
@@ -166,18 +168,18 @@ border-radius: 500px;
 <!--=====================================================================-->
 
 
-<?php include('footer.php')?>
+
           </div>
         </div>
-      </div>
 
 
 
+        <div class="card">
 
+          <?php include('footer.php')?>
+          <footer class="footer">Copyright © Information Technology 2017</footer>
 
-            <footer class="footer">Copyright © Information Technology 2017</footer>
         </div>
-    </div>
 
 
 

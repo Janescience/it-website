@@ -5277,8 +5277,8 @@ Main sidebar
 sidebar navigation
 ******************/
 .scroll-sidebar {
-  margin: 0 auto;
-  max-width: 1280px; }
+  margin: auto;
+  max-width: 1280px;  }
 
 .collapse.in {
   display: block; }
