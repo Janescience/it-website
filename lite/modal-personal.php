@@ -102,7 +102,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="nameTeacherHeader">ประวัติและผลงาน <button id="printAll" class="btn btn-info " ><i class="mdi mdi-file-pdf"></i></button></h4>
+        <h4 class="modal-title" id="nameTeacherHeader">ประวัติและผลงาน <button id="printAll" class="btn btn-info " ><i class="mdi mdi-file-document"></i></button></h4>
       </div>
       <div class="modal-body">
 
@@ -112,9 +112,11 @@
             <li id="workTeacher" class="nav-item"><a class="nav-link" href="#papers"  r data-toggle="tab"><h5>ผลงานวิชาการ</h5></a></li>
             <li id="workPerson" class="nav-item"><a class="nav-link" href="#personWork"  r data-toggle="tab"><h5>ผลงานวิชาการ</h5></a></li>
           </ul>
+          <div id="all">
           <div class="tab-content" style="text-align:left;">
             <div  class="container tab-pane active" id="personalexp"><br>
-              <button id="printHisEducation" class="btn btn-ligth" ><i class="mdi mdi-file-pdf"></i></button>
+              <button id="printHisEducation" class="btn btn-ligth" ><i class="mdi mdi-file-document"></i></button>
+            <div id="historyEducation">
             <p><strong><u><h5>ประวัติการศึกษา</h5></u></strong></p>
             <ul id="hisEdu">
 
@@ -123,10 +125,11 @@
             <ul id="expert">
 
             </ul>
-
+          </div>
             </div>
             <div  class="container tab-pane" id="worpexp"><br>
-              <button id="printHisWork" class="btn btn-ligth " ><i class="mdi mdi-file-pdf"></i></button>
+              <button id="printHisWork" class="btn btn-ligth " ><i class="mdi mdi-file-document"></i></button>
+              <div id="historyWork">
 
               <p><strong><u><h5>ประวัติการทำงาน</h5></u></strong></p>
               <ul id="hisWork">
@@ -137,8 +140,10 @@
 
               </ul>
             </div>
+            </div>
             <div class="container tab-pane" id="papers"><br>
-              <button id="printHisAcademicWork" class="btn btn-ligth"><i class="mdi mdi-file-pdf"></i></button>
+              <button id="printHisAcademicWork" class="btn btn-ligth"><i class="mdi mdi-file-document"></i></button>
+              <div id="academicWork">
 
               <p><strong><u><h5>ผลงานวิชาการ</h5></u></strong></p>
               <p><strong><h6>วารสารระดับชาติที่อยู่ในฐานข้อมูลสากล</h6></strong></p>
@@ -169,6 +174,7 @@
 
               </ul>
             </div>
+            </div>
             <div class="container tab-pane" id="personWork"><br>
               <button id="printHisAcademicWork" class="btn btn-ligth"><i class="mdi mdi-file-pdf"></i></button>
 
@@ -181,6 +187,7 @@
             <div id="print"></div>
       </div>
     </div>
+  </div>
       <div class="modal-footer">
         <button id="btClose" class="btn btn-danger" data-dismiss="modal">ปิด</button>
       </div>

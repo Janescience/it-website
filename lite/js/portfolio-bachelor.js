@@ -91,7 +91,7 @@ $(document).ready(function(){
 
     var dbImage = portBecRef.child(id).child('port_image');
     dbImage.on('value',snap => {
-      $('#portfolioImage').append("<img src='"+snap.val()+"'  style='"+'border-radius: 10px; '+"' width='"+'600px'+"'/>");
+      $('#portfolioImage').append("<img src='"+snap.val()+"' style='"+'border-radius: 25px'+"' class='"+'col-md-12'+"' border='"+'2'+"'/>");
     });
 
     });

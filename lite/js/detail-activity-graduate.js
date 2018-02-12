@@ -22,10 +22,18 @@ var count=0;
     $('#thumbnails').append("<article tabindex='"+'-1'+"'><a class='"+'thumbnail'+"' href='"+image+"' data-position='"+'left center'+"'><img src='"+image+"' alt='"+''+"' /></a></article>");
 
     if(count == 1){
+      $('#viewer').empty();
     $('#viewer').append("<div class='"+'slide active'+"'><div class='"+'image'+"' style='"+' background-image: url('+image+');'+"'></div>");
   }
 
   });
+
+  if(count == 0){
+    $('#viewer').empty();
+    $('#thumbnails').append("<div class='"+'col-lg-4'+"'></div><h4 class='"+'text-center col-lg-4'+"'>"+
+                            " กิจกรรมนี้ไม่มีรูปภาพ</h4><div class='"+'col-lg-4'+"'></div>");
+  }
+
 
 
 
