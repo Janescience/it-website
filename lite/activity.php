@@ -42,12 +42,12 @@
 
         <div class="card">
           <center>
-            <div class="card-block col-lg-4">
+            <div class="card-block col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
           <div class="card text-center">
             <div class="card-block">
               <h1>กิจกรรมของนักศึกษา</h1>
 
-              <div class="fb-share-button" data-href="http://it2.sut.ac.th/prj60_g7/it-website/lite/activity.php" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+              <div class="btn btn-warning fb-share-button" data-href="http://it2.sut.ac.th/prj60_g7/it-website/lite/activity.php" data-layout="button_count" data-size="large" data-mobile-iframe="true">
                 <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a></div>
 
             </div>
@@ -57,6 +57,8 @@
           <div class="card-block">
             <center>
               <h2>ปริญญาตรี</h2>
+              <h5 class="card-title text-center ">o o o</h5>
+
             </center>
             <div id="showActivityBachelor" class="row">
 
@@ -64,6 +66,8 @@
             <br><br>
             <center>
               <h2>บัณฑิตศึกษา</h2>
+              <h5 class="card-title text-center ">o o o</h5>
+
             </center>
             <div id="showActivityGraduation" class="row">
 

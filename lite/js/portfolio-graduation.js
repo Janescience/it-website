@@ -10,7 +10,7 @@ $(document).ready(function(){
   };
 
     firebase.initializeApp(config);
-
+      $.LoadingOverlay("show");
   var portGraRef = firebase.database().ref("website/student/graduate/portfolio");
 
 // ======================================================= Get Portfolio =======================================================
@@ -44,6 +44,7 @@ $(document).ready(function(){
     "</div>");
 
     }
+      $.LoadingOverlay("hide");
   });
   // ======================================================= End Code =======================================================
 

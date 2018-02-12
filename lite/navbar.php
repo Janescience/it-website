@@ -7,7 +7,7 @@
 
         <a class="navbar-brand " href="index.php">
 
-          <span class="hidden-sm-down"><img src="../images/it-logo.png" width="450px"></span>
+          <span class="hidden-sm-down"><img src="../images/it-logo.png" width="400px"></span>
 
 </a>
   </div>

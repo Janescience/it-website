@@ -15,7 +15,7 @@ $(document).ready(function(){
     var showStatus = snap.child("port_show_status").val();
 
 
-    if (Status == "Hall Of Fame" && showStatus == "checked"){
+    if (Status == "ผลงานดีเด่น" && showStatus == "checked"){
     $('#showHall').append("<div  class='"+'col-xlg-4 col-lg-4 col-md-3 col-sm-6'+"'>"+
         "<div class='"+'card card-warning'+"'>"+
             "<div  class='"+'el-card-item'+"'>"+
@@ -34,6 +34,7 @@ $(document).ready(function(){
     "</div>");
 
     }
+
   });
   // ======================================================= End Code =======================================================
 
@@ -81,7 +82,7 @@ $(document).ready(function(){
 
     var dbImage = portBecRef.child(id).child('port_image');
     dbImage.on('value',snap => {
-      $('#portImage').append("<img src='"+snap.val()+"'  style='"+'border-radius: 10px'+"' width='"+'600px'+"'/>");
+      $('#portImage').append("<img src='"+snap.val()+"' style='"+'border-radius: 25px'+"' class='"+'col-md-12'+"' border='"+'2'+"'/>");
     });
 
     });

@@ -16,7 +16,7 @@ $(document).ready(function(){
     var showStatus = snap.child("port_show_status").val();
 
 
-    if (Status == "Hall Of Fame" && showStatus == "checked"){
+    if (Status == "ผลงานดีเด่น" && showStatus == "checked"){
     $('#showHall').append("<div  class='"+'col-lg-4 col-xlg-4 col-md-3 col-sm-4'+"'>"+
         "<div class='"+'card card-warning'+"'>"+
             "<div  class='"+'el-card-item'+"'>"+

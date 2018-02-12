@@ -22,6 +22,7 @@ $(document).ready(function(){
       var dateStart = snap.child("activity_start").val();
       var dateEnd = snap.child("activity_end").val();
       var detail = snap.child("activity_detail").val();
+      var name = snap.child("activity_name").val();
 
       if (showStatus == "checked"){
       $('#showActivityBachelor').append("<div  class='"+'col-xlg-3 col-lg-4 col-md-4 col-sm-6'+"'>"+
@@ -29,7 +30,7 @@ $(document).ready(function(){
             "<div class='"+'card-block'+"'>"+
               "<div  class='"+'el-card-item'+"'>"+
                   "<div class='"+'el-card-content'+"'>"+
-                      "<h3 class='"+'box-title text-center'+"'><i class='"+'mdi mdi-lightbulb-on'+"'></i><br>"+key+"</h3>"+
+                      "<h3 class='"+'box-title text-center'+"'><i class='"+'mdi mdi-lightbulb-on'+"'></i><br>"+name+"</h3>"+
                       "<p class='"+'box-title text-center'+"'>"+detail+"</p><br><br>"+
                       "<h6 class='"+'text-center'+"'><i class='"+'mdi mdi-calendar-clock'+"'></i> "+dateStart+" - "+dateEnd+"</h6><br>"+
                       "</div>"+
@@ -50,18 +51,24 @@ $(document).ready(function(){
     $('#showActivityBachelor').on('click','.image',function(){
       var id = $(this).closest('div').attr('id');
       sessionStorage.setItem("activityId",id);
-      window.open("http://localhost/it-website/lite/detail-activity-bachelor.php");
+      window.open("http://localhost:88/it-website/lite/detail-activity-bachelor.php");
     });
 
     $('#showActivityBachelor').on('click','.video',function(){
       $('#list_video').empty();
       var id = $(this).closest('div').attr('id');
+      var i=0;
       $('#showVideoModal').modal('show');
       var videoBecRef = firebase.database().ref("website/student/bechelor/activity").child(id).child('activity_video');
       videoBecRef.on("child_added",snap => {
         var video = snap.child('videos').val();
         $('#list_video').append("<div class='"+'col-xlg-6 col-lg-6 col-sm-12 col-md-12'+"'><video style='"+'border-radius:10px'+"'width='"+'370px'+"' controls><source src='"+video+"' type='"+'video/WebM'+"'></video></div>");
+        i=i+1;
       });
+      if(i == 0){
+        $('#list_video').append("<div class='"+'col-lg-4'+"'></div><h4 class='"+'text-center col-lg-4'+"'>"+
+                                "<i class='"+'mdi mdi-video-off'+"'></i> กิจกรรมนี้ไม่มีวิดีโอ</h4><div class='"+'col-lg-4'+"'></div>");
+      }
 
     });
 
@@ -75,6 +82,7 @@ $(document).ready(function(){
       var dateStart = snap.child("activity_start").val();
       var dateEnd = snap.child("activity_end").val();
       var detail = snap.child("activity_detail").val();
+      var name = snap.child("activity_name").val();
 
       if (showStatus == "checked"){
       $('#showActivityGraduation').append("<div  class='"+'col-xlg-3 col-lg-4 col-md-4 col-sm-6'+"'>"+
@@ -82,8 +90,8 @@ $(document).ready(function(){
             "<div class='"+'card-block'+"'>"+
               "<div  class='"+'el-card-item'+"'>"+
                   "<div class='"+'el-card-content'+"'>"+
-                      "<h3 class='"+'box-title text-center'+"'><i class='"+'mdi mdi-lightbulb-on'+"'></i><br>"+key+"</h3>"+
-                      "<p class='"+'box-title text-center'+"'>"+detail+"</p><br><br>"+                      
+                      "<h3 class='"+'box-title text-center'+"'><i class='"+'mdi mdi-lightbulb-on'+"'></i><br>"+name+"</h3>"+
+                      "<p class='"+'box-title text-center'+"'>"+detail+"</p><br><br>"+
                       "<h6 class='"+'text-center'+"'><i class='"+'mdi mdi-calendar-clock'+"'></i> "+dateStart+" - "+dateEnd+"</h6><br>"+
                       "</div>"+
 
@@ -103,9 +111,26 @@ $(document).ready(function(){
     $('#showActivityGraduation').on('click','.image',function(){
       var id = $(this).closest('div').attr('id');
       sessionStorage.setItem("activityId",id);
-      window.open("http://localhost/it-website/lite/detail-activity-graduate.php");
+      window.open("http://localhost:88/it-website/lite/detail-activity-graduate.php");
     });
 
+
+        $('#showActivityGraduation').on('click','.video',function(){
+          $('#list_video').empty();
+          var id = $(this).closest('div').attr('id');
+          var i=0;
+          $('#showVideoModal').modal('show');
+          var videoBecRef = firebase.database().ref("website/student/graduate/activity").child(id).child('activity_video');
+          videoBecRef.on("child_added",snap => {
+            var video = snap.child('videos').val();
+            $('#list_video').append("<div class='"+'col-xlg-6 col-lg-6 col-sm-12 col-md-12'+"'><video style='"+'border-radius:10px'+"'width='"+'370px'+"' controls><source src='"+video+"' type='"+'video/WebM'+"'></video></div>");
+            i=i+1;
+          });
+          if(i == 0){
+              $('#list_video').append("<div class='"+'col-lg-4'+"'></div><h4 class='"+'text-center col-lg-4'+"'>"+
+                                      "<i class='"+'mdi mdi-video-off'+"'></i> กิจกรรมนี้ไม่มีวิดีโอ</h4><div class='"+'col-lg-4'+"'></div>");
+          }
+        });
 
 
   });
