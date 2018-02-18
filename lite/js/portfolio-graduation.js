@@ -26,7 +26,7 @@ $(document).ready(function(){
 
 
     if (showStatus == "checked"){
-    $('#showPort').append("<div  class='"+'col-lg-3 col-md-3 col-sm-4'+"'>"+
+      $('#showPort').append("<div  class='"+'answer col-xlg-3 col-lg-3 col-md-3 col-sm-3 col-xl-3'+"'>"+
         "<div class='"+'card'+"'>"+
             "<div  class='"+'el-card-item'+"'>"+
                 "<div class='"+'el-card-avatar el-overlay-1'+"'  style='"+'height:200px'+"'> <img src='"+Image+"'  alt='"+'user'+"'>"+
@@ -97,6 +97,12 @@ $(document).ready(function(){
 
     });
     // ======================================================= End Code =======================================================
+
+    $("#searchPort").keyup(function(event) {
+    var text = $(this).val();
+    $('#showPort .answer:contains(' + text + ')').show();
+    $('#showPort .answer:not(:contains(' + text + '))').hide();
+  });
 
 
 });
