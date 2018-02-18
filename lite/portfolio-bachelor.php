@@ -9,10 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-  
+
 
      <?php  include('header.php') ?>
 
+
+
+
+     </style>
 </head>
 
 <body class="fix-header fix-sidebar card-no-border logo-center">
@@ -37,21 +41,35 @@
             <div class="card col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
               <div class="card-block">
                 <h1 class="card-title text-center "><i class="mdi mdi-trophy-award text-warning"></i> ผลงานระดับปริญญาตรี <i class="mdi mdi-trophy-award text-warning"></i> </h1>
-
               </div>
             </div>
           </div>
           </div>
 
 
-
   <div class="row">
-    <div class="col-xlg-12 col-lg-12 col-md-8">
+    <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 col-xl-12">
       <div  class="row el-element-overlay">
           <div class="card-block">
             <h1 class="card-title text-center "><i class="mdi mdi-trophy text-warning"></i><br>ผลงานดีเด่น</h1>
             <h5 class="card-title text-center ">o o o</h5>
-          <div id="showHall"  class="row"></div>
+            <div class="row">
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-4">
+              </div>
+              <div class="col-xlg-4 col-lg-4 col-md-4 col-sm-4 col-xl-4">
+
+              <div class="form-group">
+                <span class="counter pull-right"></span>
+                  <div class="input-group">
+                    <div class="input-group-addon"><i class="ti-search"></i></div>
+                    <input id="searchHall" type="text"  class="form-control" >
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div id="showHall"  class="row HallResults"></div>
           </div>
 
       </div>
@@ -59,19 +77,35 @@
   </div>
 
 
-          <div class="row">
-            <div class="col-xlg-12 col-lg-12 col-md-8">
-              <div  class="row el-element-overlay">
-                  <div class="card-block">
-                    <h2 class="card-title text-center "><i class="mdi mdi-trophy-variant "></i><br> ผลงานทั่วไป</h2>
-                    <h5 class="card-title text-center ">o o o</h5>
-                  <div id="showPort"  class="row"></div>
-                  </div>
 
+  <div class="row">
+    <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 col-xl-12">
+      <div  class="row el-element-overlay">
+          <div class="card-block">
+            <h2 class="card-title text-center "><i class="mdi mdi-trophy-variant "></i><br> ผลงานทั่วไป</h2>
+            <h5 class="card-title text-center ">o o o</h5>
+            <div class="row">
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-4">
+              </div>
+              <div class="col-xlg-4 col-lg-4 col-md-4 col-sm-4 col-xl-4">
+
+              <div class="form-group">
+                <span class="PortCounter pull-right"></span>
+                  <div class="input-group">
+                    <div class="input-group-addon"><i class="ti-search"></i></div>
+                    <input id="searchPort" type="text"  class="form-control" >
+                  </div>
+                </div>
               </div>
             </div>
+          <div id="showPort"  class="row results"></div>
           </div>
 
+      </div>
+    </div>
+  </div>
 
 
         </div>

@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 
     if (Status == "ผลงานดีเด่น" && showStatus == "checked"){
-    $('#showHall').append("<div  class='"+'col-xlg-4 col-lg-4 col-md-3 col-sm-6'+"'>"+
+    $('#showHall').append("<div  class='"+'answer col-xlg-3 col-lg-3 col-md-3 col-sm-3 col-xl-3'+"'>"+
         "<div class='"+'card card-warning'+"'>"+
             "<div  class='"+'el-card-item'+"'>"+
                 "<div class='"+'el-card-avatar el-overlay-1'+"' style='"+'height:250px'+"'> <img src='"+Image+"'  alt='"+'user'+"'>"+
@@ -88,5 +88,10 @@ $(document).ready(function(){
     });
     // ======================================================= End Code =======================================================
 
+    $("#searchHall").keyup(function(event) {
+    var text = $(this).val();
+    $('#showHall .answer:contains(' + text + ')').show();
+    $('#showHall .answer:not(:contains(' + text + '))').hide();
+  });
 
 });
