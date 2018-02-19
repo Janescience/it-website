@@ -27,7 +27,7 @@ $(document).ready(function(){
                     "</div>"+
                 "</div>"+
                 "<div class='"+'el-card-content'+"'>"+
-                    "<h2 class='"+'box-title text-black'+"'><i class='"+'mdi mdi-seal'+"'></i> "+Name+"</h2>"+
+                    "<h2 class='"+'box-title text-white'+"'><i class='"+'mdi mdi-seal'+"'></i> "+Name+"</h2>"+
                     "</div>"+
             "</div>"+
         "</div>"+

@@ -10,6 +10,30 @@ $(document).ready(function(){
   };
   firebase.initializeApp(config);
     $.LoadingOverlay("show");
+    var dateAndTime = new Date();
+    var dateViewPage = dateAndTime.toDateString();
+    var monthViewPage = dateViewPage.split(" ")[1];
+    var yearViewPage = dateViewPage.split(" ")[3];
+
+    var n = localStorage.getItem('counter_index');
+    n++;
+
+    var countView = {
+      count:n
+    };
+
+    localStorage.setItem("counter_index", n);
+    firebase.database().ref('statistic/index_page').child(yearViewPage).child(monthViewPage).update(countView);
+
+    var s = localStorage.getItem('counter_sum');
+    s++;
+    var sumView = {
+      sum:s
+    };
+    localStorage.setItem("counter_sum", s);
+    firebase.database().ref('statistic/sum').child(yearViewPage).child(monthViewPage).update(sumView);
+
+
   var i=0;
   var dbImgHeaderSlide = firebase.database().ref('website/index/header');
 dbImgHeaderSlide.on('child_added',snap=>{
@@ -21,16 +45,47 @@ dbImgHeaderSlide.on('child_added',snap=>{
   var txt_bt = snap.child('txt_bt').val();
 
   if(i==0){
-    $('#carouselCount').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+i+"' class='"+'active'+"'></li>");
-    $('#imageHeaderSlide').append("<div class='"+'carousel-item active'+"' ><img class='"+'d-block w-100'+"' src='"+bg+"' ><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#carouselCount').append("<li id='"+snap.key+"' data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+i+"' class='"+'active'+"'></li>");
+    $('#imageHeaderSlide').append("<div  id='"+snap.key+"' class='"+'carousel-item active'+"'><div style='"+'background-image:url('+bg+'); width:100%;height:50vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
                               "<h1 class='"+'text-white'+"'>"+topic+"</h1><h3 class='"+'text-white'+"'>"+detail+"</h3><a href='"+link+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>"+txt_bt+"</button></a></div></div>");
   }else{
-    $('#carouselCount').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+i+"'></li>");
-    $('#imageHeaderSlide').append("<div class='"+'carousel-item'+"'><img class='"+'d-block w-100'+"'  src='"+bg+"' ><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#carouselCount').append("<li id='"+snap.key+"' data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+i+"'></li>");
+    $('#imageHeaderSlide').append("<div  id='"+snap.key+"' class='"+'carousel-item'+"'><div style='"+'background-image:url('+bg+');width:100%;height:50vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
                               "<h1 class='"+'text-white'+"'>"+topic+"</h1><h3 class='"+'text-white'+"'>"+detail+"</h3><a href='"+link+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>"+txt_bt+"</button></a></div></div>");
   }
   $.LoadingOverlay("hide");
   i=i+1;
+});
+
+dbImgHeaderSlide.on('child_changed',snap=>{
+
+  var bg = snap.child('bg').val();
+  var topic = snap.child('topic').val();
+  var detail = snap.child('detail').val();
+  var link = snap.child('link').val();
+  var txt_bt = snap.child('txt_bt').val();
+  var active = $('#imageHeaderSlide').find('#'+snap.key).attr('class');
+    $('#imageHeaderSlide').find('#'+snap.key).remove();
+    if(active=="carousel-item active"){
+      $('#imageHeaderSlide').append("<div  id='"+snap.key+"'  class='"+'carousel-item active'+"'><div style='"+'background-image:url('+bg+'); width:100%;height:50vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
+                                "<h1 class='"+'text-white'+"'>"+topic+"</h1><h3 class='"+'text-white'+"'>"+detail+"</h3><a href='"+link+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>"+txt_bt+"</button></a></div></div>");
+    }else{
+      $('#imageHeaderSlide').append("<div  id='"+snap.key+"'  class='"+'carousel-item '+"'><div style='"+'background-image:url('+bg+'); width:100%;height:50vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
+                                "<h1 class='"+'text-white'+"'>"+topic+"</h1><h3 class='"+'text-white'+"'>"+detail+"</h3><a href='"+link+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>"+txt_bt+"</button></a></div></div>");
+    }
+
+
+});
+
+dbImgHeaderSlide.on('child_removed',snap=>{
+var active = $('#imageHeaderSlide').find('#'+snap.key).attr('class');
+    $('#imageHeaderSlide').find('#'+snap.key).remove();
+    $('#carouselCount').find('#'+snap.key).remove();
+    if(active=="carousel-item active"){
+      i+1;
+      $('#imageHeaderSlide').find('.carousel-item').attr('class',"carousel-item active");
+    }
+
 });
 
 var dbImgBachelor = firebase.database().ref('website/index/courseoffered').child('imageBachelor');
@@ -72,11 +127,11 @@ dbInfoBachelor.on('child_added',snap=>{
 
   if(cout==0){
     $('#carouselInfoBachelor').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+cout+"' class='"+'active'+"'></li>");
-    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item active'+"' ><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item active'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
                               "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }else{
     $('#carouselInfoBachelor').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+cout+"' ></li>");
-    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item'+"' ><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
                               "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }
     cout=cout+1;
@@ -90,11 +145,11 @@ dbInfoGraduate.on('child_added',snap=>{
 
   if(num==0){
     $('#carouselInfoGraduate').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+num+"' class='"+'active'+"'></li>");
-    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item active'+"' ><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item active'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
                               "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }else{
     $('#carouselInfoGraduate').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+num+"' v></li>");
-    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item'+"'><img class='"+'d-block w-100'+"' src='"+photo+"'><div class='"+'carousel-caption d-none d-md-block'+"'>"+
+    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item'+"'><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
                               "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }
   num=num+1;
