@@ -141,18 +141,9 @@
 </div>
 </div>
 
-<!--=====================================================================-->
-
-
-          </div>
-        </div>
-        
-        <div class="card">
 
           <?php include('footer.php')?>
-          <footer class="footer">Copyright © Information Technology 2017</footer>
 
-        </div>
 
 
 

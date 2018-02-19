@@ -18,6 +18,30 @@ $(document).ready(function(){
   var i=0;
 
   $.LoadingOverlay("show");
+
+  var dateAndTime = new Date();
+  var dateViewPage = dateAndTime.toDateString();
+  var monthViewPage = dateViewPage.split(" ")[1];
+  var yearViewPage = dateViewPage.split(" ")[3];
+
+
+  var n = localStorage.getItem('counter_course_master');
+  n++;
+  var countView = {
+    count:n
+  };
+
+  localStorage.setItem("counter_course_master", n);
+   firebase.database().ref('statistic/course_master_page').child(yearViewPage).child(monthViewPage).update(countView);
+
+   var s = localStorage.getItem('counter_sum');
+   s++;
+   var sumView = {
+     sum:s
+   };
+   localStorage.setItem("counter_sum", s);
+   firebase.database().ref('statistic/sum').child(yearViewPage).child(monthViewPage).update(sumView);
+
   $('#Studyplan').hide();
   $('#branch').hide();
   $('#download').hide();

@@ -25,7 +25,7 @@
 
     <div class="page-wrapper">
       <div class="card-block">
-        <div class="row page-titles"></div>
+
 
           <div class="row">
             <div class="col-lg-12">
@@ -59,7 +59,6 @@
           </div>
         </div>
 
-
         <div class="row">
           <div class="col-lg-3 col-xlg-3 col-md-5">
             <div class="card">
@@ -86,7 +85,7 @@
             </div>
           </div>
 
-          <div class="col-lg-9">
+          <div class="col-lg-9 col-md-7">
             <div class="card">
               <div class="card-block">
 
@@ -142,7 +141,7 @@
               <h6 class="card-subtitle m-b-20 text-muted text-center">o o o</h6>
             </div>
 
-            <div class="col-lg-4 col-md-8">
+            <div class="col-lg-4 col-xlg-4 col-md-12 col-sm-12">
               <div class="card">
                 <div class="el-card-item">
                   <div class="el-card-avatar el-overlay-1">
@@ -163,7 +162,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-8">
+            <div class="col-lg-4 col-xlg-4 col-md-12 col-sm-12">
               <div class="card">
                 <div class="el-card-item">
                   <div class="el-card-avatar el-overlay-1">
@@ -183,7 +182,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-8">
+            <div class="col-lg-4 col-xlg-4 col-md-12 col-sm-12">
               <div class="card">
                 <div class="el-card-item">
 
@@ -378,29 +377,12 @@
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
-
-
   </div>
 </div>
-
-
-<?php include('footer.php')?>
-
-
-
-
-  <footer class="footer">
-
-    Copyright © Information Technology 2017
-  </footer>
-        </div>
-    </div>
-
+    <?php include('footer.php')?>
     <?php include('import-javascript.php')?>
     <script src="js/index.js"></script>
 </body>

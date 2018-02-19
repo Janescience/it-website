@@ -1653,7 +1653,6 @@ File: scss
 
 .page-wrapper {
   background: #eef5f9;
-  padding-bottom: 60px;
   padding-top: 60px; }
 
 /*******************
@@ -5405,6 +5404,8 @@ sidebar navigation
   -webkit-transform: rotate(-135deg) translate(0, -50%);
   -ms-transform: rotate(-135deg) translate(0, -50%);
   -o-transform: rotate(-135deg) translate(0, -50%);
+  top: 45%;
+width: .58em;
   transform: rotate(-135deg) translate(0, -50%); }
 
 @media (max-width: 1024px) and (min-width: 700px) {
@@ -5413,10 +5414,13 @@ sidebar navigation
 
 @media (max-width: 767px) {
   .mini-sidebar .left-sidebar {
-    position: fixed;
+    position: absolute;
+    width: 250px;
+    left: 0px;
     display: none;
     height: 100%;
-    overflow: auto; }
+    overflow: auto;
+  text-align: left !important;}
   .mini-sidebar.show-sidebar .left-sidebar,
   .mini-sidebar.show-sidebar .sidebar-footer {
     display: block; }
@@ -6487,8 +6491,7 @@ File: scss
     line-height: 40px; }
   .mini-sidebar .page-wrapper {
     margin-left: 0px; }
-  .mini-sidebar .footer {
-    left: 60px; }
+
   .flex-wrap {
     -ms-flex-wrap: nowrap !important;
     flex-wrap: nowrap !important;
@@ -6497,7 +6500,6 @@ File: scss
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
     margin: 0 auto; } }
 
 /*-- ==============================================================

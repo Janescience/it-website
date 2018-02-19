@@ -19,6 +19,28 @@ $(document).ready(function(){
 
   $.LoadingOverlay("show");
 
+  var dateAndTime = new Date();
+  var dateViewPage = dateAndTime.toDateString();
+  var monthViewPage = dateViewPage.split(" ")[1];
+  var yearViewPage = dateViewPage.split(" ")[3];
+
+  var n = localStorage.getItem('counter_personal');
+  n++;
+  var countView = {
+    count:n
+  };
+
+  localStorage.setItem("counter_personal", n);
+   firebase.database().ref('statistic/personal_page').child(yearViewPage).child(monthViewPage).update(countView);
+
+   var s = localStorage.getItem('counter_sum');
+   s++;
+   var sumView = {
+     sum:s
+   };
+   localStorage.setItem("counter_sum", s);
+   firebase.database().ref('statistic/sum').child(yearViewPage).child(monthViewPage).update(sumView);
+
   function downloadInnerHtml(filename, elId) {
     debugger;
     var elHtml = document.getElementById(elId).innerHTML;

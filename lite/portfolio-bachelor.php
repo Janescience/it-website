@@ -34,24 +34,28 @@
 
       <div class="page-wrapper">
         <div class="card-block">
+
+          <div class="card">
+              <div class="card-block">
+          <div class="row text-center">
+
+          <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
+
+              <i class="fa fa-trophy fa-3x text-warning" aria-hidden="true"></i>
+              <h3 class="card-title text-center"> ผลงานระดับปริญญาตรี </h3>
+
+          </div>
+        </div>
+        </div>
+      </div>
+
         <div class="card">
           <div class="card-block">
-            <div class="row text-center">
-                <div class="card-block">
-            <div class="card col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
-              <div class="card-block">
-                <h1 class="card-title text-center "><i class="mdi mdi-trophy-award text-warning"></i> ผลงานระดับปริญญาตรี <i class="mdi mdi-trophy-award text-warning"></i> </h1>
-              </div>
-            </div>
-          </div>
-          </div>
-
-
   <div class="row">
     <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 col-xl-12">
       <div  class="row el-element-overlay">
           <div class="card-block">
-            <h1 class="card-title text-center "><i class="mdi mdi-trophy text-warning"></i><br>ผลงานดีเด่น</h1>
+            <h3 class="card-title text-center ">ผลงานดีเด่น</h3>
             <h5 class="card-title text-center ">o o o</h5>
             <div class="row">
               <div class="col-md-4">
@@ -110,11 +114,9 @@
 
         </div>
         </div>
-
         </div>
       </div>
 <?php include('footer.php')?>
-            <footer class="footer">Copyright © Information Technology 2017</footer>
     </div>
 
     <?php include('import-javascript.php')?>

@@ -7,7 +7,7 @@
 
         <a class="navbar-brand " href="index.php">
 
-          <span class="hidden-sm-down"><img src="../images/it-logo.png" width="400px"></span>
+          <span class="hidden-xs-down"><img src="../images/it-logo.png" width="350px"></span>
 
 </a>
   </div>
@@ -28,7 +28,7 @@
                 <nav class="sidebar-nav active">
                     <ul id="sidebarnav" >
                         <li>
-                            <a href="index.php" aria-expanded="false"><i class="mdi mdi-airplay"></i><span class="hide-menu"> หน้าหลัก</span></a>
+                            <a href="index.php" aria-expanded="false"><i class="mdi mdi-airplay"></i><span class="hide-menu">หน้าหลัก</span></a>
 
                         </li>
                         <li>
@@ -55,7 +55,7 @@
 
                         </li>
                         <li>
-                            <a  href="activity.php" aria-expanded="false"><i class="mdi mdi-camera"></i>กิจกรรมนักศึกษา</a>
+                            <a  href="activity.php" aria-expanded="false"><i class="mdi mdi-camera"></i>กิจกรรม</a>
                         </li>
 
 
