@@ -17,8 +17,8 @@ $(document).ready(function(){
 
 
     if (Status == "ผลงานดีเด่น" && showStatus == "checked"){
-      $('#showHall').append("<div  class='"+'answer col-xlg-3 col-lg-3 col-md-3 col-sm-3 col-xl-3'+"'>"+
-        "<div class='"+'card card-warning'+"'>"+
+      $('#showHall').append("<div  class='"+'answer col-xlg-4 col-lg-4 col-md-6 col-sm-12'+"'>"+
+        "<div class='"+'card card-success'+"'>"+
             "<div  class='"+'el-card-item'+"'>"+
                 "<div class='"+'el-card-avatar el-overlay-1'+"' style='"+'height:250px'+"'> <img src='"+Image+"'  alt='"+'user'+"'>"+
                     "<div class='"+'el-overlay scrl-up'+"'>"+

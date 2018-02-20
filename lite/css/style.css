@@ -1611,7 +1611,7 @@ Layouts
 .css-bar:after {
   z-index: 1; }
 
-.css-bar > i {
+  .css-bar > i {
   z-index: 10; }
 
 /*******************/
