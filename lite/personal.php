@@ -39,7 +39,7 @@ border-radius: 500px;
       <div class="card-block">
         <div class="card col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
           <div class="card-block">
-            <h1 class="card-title text-center "><i class="ti-user"></i><br> คณาจารย์ </h1>
+            <h1 class="card-title text-center "> คณาจารย์ </h1>
           </div>
         </div>
           <div class="card">

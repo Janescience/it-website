@@ -59,8 +59,8 @@ $(document).ready(function(){
 
               "</div>"+
               "<div class='"+'card-body text-center'+"' id='"+key+"'>"+
-                  "<button class='"+'btn btn-info image'+"'><i class='"+'mdi mdi-image-multiple'+"'></i> รูปภาพ</button>"+
-                  " <button class='"+'btn btn-warning video'+"'><i class='"+'mdi mdi-video'+"'></i> วิดีโอ</button>"+
+                  "<button class='"+'btn btn-info image  btn-rounded'+"'><i class='"+'mdi mdi-image-multiple'+"'></i> รูปภาพ</button>"+
+                  " <button class='"+'btn btn-success video  btn-rounded'+"'><i class='"+'mdi mdi-video'+"'></i> วิดีโอ</button>"+
               "</div>"+
             "</div>"+
           "</div>"+
@@ -73,7 +73,7 @@ $(document).ready(function(){
     $('#showActivityBachelor').on('click','.image',function(){
       var id = $(this).closest('div').attr('id');
       sessionStorage.setItem("activityId",id);
-      window.open("http://localhost:88/it-website/lite/detail-activity-bachelor.php");
+      window.open("http://it2.sut.ac.th/prj60_g7/it-website/lite/detail-activity-bachelor.php");
     });
 
     $('#showActivityBachelor').on('click','.video',function(){
@@ -119,8 +119,8 @@ $(document).ready(function(){
 
               "</div>"+
               "<div class='"+'card-body text-center'+"' id='"+key+"'>"+
-                  "<button class='"+'btn btn-info image'+"'><i class='"+'mdi mdi-image-multiple'+"'></i> รูปภาพ</button>"+
-                  " <button class='"+'btn btn-warning video'+"'><i class='"+'mdi mdi-video'+"'></i> วิดีโอ</button>"+
+                  "<button class='"+'btn btn-info image btn-rounded'+"'><i class='"+'mdi mdi-image-multiple'+"'></i> รูปภาพ</button>"+
+                  " <button class='"+'btn btn-success video btn-rounded'+"'><i class='"+'mdi mdi-video'+"'></i> วิดีโอ</button>"+
               "</div>"+
             "</div>"+
           "</div>"+
@@ -133,7 +133,7 @@ $(document).ready(function(){
     $('#showActivityGraduation').on('click','.image',function(){
       var id = $(this).closest('div').attr('id');
       sessionStorage.setItem("activityId",id);
-      window.open("http://localhost:88/it-website/lite/detail-activity-graduate.php");
+      window.open("http://it2.sut.ac.th/prj60_g7/it-website/lite/detail-activity-graduate.php");
     });
 
 

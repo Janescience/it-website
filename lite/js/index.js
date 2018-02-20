@@ -126,16 +126,43 @@ dbInfoBachelor.on('child_added',snap=>{
   var url = snap.child('url').val();
 
   if(cout==0){
-    $('#carouselInfoBachelor').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+cout+"' class='"+'active'+"'></li>");
-    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item active'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
+    $('#carouselInfoBachelor').append("<li  id='"+snap.key+"' data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+cout+"' class='"+'active'+"'></li>");
+    $('#imageInfoBachelorSlide').append("<div  id='"+snap.key+"' class='"+'carousel-item active'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
                               "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }else{
-    $('#carouselInfoBachelor').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+cout+"' ></li>");
-    $('#imageInfoBachelorSlide').append("<div class='"+'carousel-item'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
+    $('#carouselInfoBachelor').append("<li  id='"+snap.key+"' data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+cout+"' ></li>");
+    $('#imageInfoBachelorSlide').append("<div  id='"+snap.key+"' class='"+'carousel-item'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
                               "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }
     cout=cout+1;
 });
+
+dbInfoBachelor.on('child_changed',snap=>{
+  var photo = snap.child('photo').val();
+  var topic = snap.child('topic').val();
+  var url = snap.child('url').val();
+  var active = $('#imageInfoBachelorSlide').find('#'+snap.key).attr('class');
+    $('#imageInfoBachelorSlide').find('#'+snap.key).remove();
+    if(active=="carousel-item active"){
+      $('#imageInfoBachelorSlide').append("<div  id='"+snap.key+"' class='"+'carousel-item active'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
+                                "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
+    }else{
+      $('#imageInfoBachelorSlide').append("<div  id='"+snap.key+"' class='"+'carousel-item'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
+                                "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
+    }
+});
+
+dbInfoBachelor.on('child_removed',snap=>{
+var active = $('#imageInfoBachelorSlide').find('#'+snap.key).attr('class');
+    $('#imageInfoBachelorSlide').find('#'+snap.key).remove();
+    $('#carouselInfoBachelor').find('#'+snap.key).remove();
+    if(active=="carousel-item active"){
+      cout+1;
+      $('#imageInfoBachelorSlide').find('.carousel-item').attr('class',"carousel-item active");
+    }
+
+});
+
 var num=0;
 var dbInfoGraduate = firebase.database().ref('website/index/info/infograduate');
 dbInfoGraduate.on('child_added',snap=>{
@@ -144,15 +171,41 @@ dbInfoGraduate.on('child_added',snap=>{
   var url = snap.child('url').val();
 
   if(num==0){
-    $('#carouselInfoGraduate').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+num+"' class='"+'active'+"'></li>");
-    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item active'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
-                              "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
+    $('#carouselInfoGraduate').append("<li id='"+snap.key+"' data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+num+"' class='"+'active'+"'></li>");
+    $('#imageInfoGraduationSlide').append("<div id='"+snap.key+"' class='"+'carousel-item active'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
+                              "<h3 class='"+'text-black'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }else{
-    $('#carouselInfoGraduate').append("<li data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+num+"' v></li>");
-    $('#imageInfoGraduationSlide').append("<div class='"+'carousel-item'+"'><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
-                              "<h3 class='"+'text-white'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
+    $('#carouselInfoGraduate').append("<li id='"+snap.key+"' data-target='"+'#carouselExampleIndicators'+"' data-slide-to='"+num+"' v></li>");
+    $('#imageInfoGraduationSlide').append("<div id='"+snap.key+"' class='"+'carousel-item'+"'><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
+                              "<h3 class='"+'text-black'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
   }
   num=num+1;
+
+});
+
+dbInfoGraduate.on('child_changed',snap=>{
+  var photo = snap.child('photo').val();
+  var topic = snap.child('topic').val();
+  var url = snap.child('url').val();
+  var active = $('#imageInfoGraduationSlide').find('#'+snap.key).attr('class');
+    $('#imageInfoGraduationSlide').find('#'+snap.key).remove();
+    if(active=="carousel-item active"){
+      $('#imageInfoGraduationSlide').append("<div  id='"+snap.key+"' class='"+'carousel-item active'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
+                                "<h3 class='"+'text-black'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
+    }else{
+      $('#imageInfoGraduationSlide').append("<div  id='"+snap.key+"' class='"+'carousel-item'+"' ><div style='"+'background-image:url('+photo+'); width:100%;height:40vh;background-position:center;background-size:cover;'+"'></div><div class='"+'carousel-caption'+"'>"+
+                                "<h3 class='"+'text-black'+"'>"+topic+"</h3><a href='"+url+"'><button type='"+'button'+"' class='"+'btn btn-success '+"'>รายละเอียด</button></a></div></div>");
+    }
+});
+
+dbInfoGraduate.on('child_removed',snap=>{
+var active = $('#imageInfoGraduationSlide').find('#'+snap.key).attr('class');
+    $('#imageInfoGraduationSlide').find('#'+snap.key).remove();
+    $('#carouselInfoGraduate').find('#'+snap.key).remove();
+    if(active=="carousel-item active"){
+      cout+1;
+      $('#imageInfoGraduationSlide').find('.carousel-item').attr('class',"carousel-item active");
+    }
 
 });
 

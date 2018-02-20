@@ -78,72 +78,61 @@
 
       <div class="page-wrapper">
         <div class="card-block">
-          <div class="card">
+          <div class="card text-center col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
             <div class="card-block">
-          <div class="row text-center">
-              <div class="card-block">
-          <div class="card col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
-            <div class="card-block">
-              <h1 class="card-title text-center "><i class="mdi mdi-trophy-award text-warning"></i> ผลงานระดับบัณฑิตศึกษา <i class="mdi mdi-trophy-award text-warning"></i> </h1>
+              <img src="../images/cup.png" width="70vh">
+              <h3 class="card-title text-center ">ผลงานระดับบัณฑิตศึกษา</h3>
 
             </div>
           </div>
-        </div>
-        </div>
+          <div class="card">
+            <div class="card-block">
+
 
 
   <div class="row">
     <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 col-xl-12">
       <div  class="row el-element-overlay">
           <div class="card-block">
-            <h1 class="card-title text-center "><i class="mdi mdi-trophy text-warning"></i><br>ผลงานดีเด่น</h1>
+            <h3 class="card-title text-center ">ผลงานดีเด่น</h3>
             <h5 class="card-title text-center ">o o o</h5>
-            <div class="row">
-              <div class="col-md-4">
-              </div>
-              <div class="col-md-4">
-              </div>
-              <div class="col-xlg-4 col-lg-4 col-md-4 col-sm-4 col-xl-4">
 
-              <div class="form-group">
-                <span class="counter pull-right"></span>
+            <center>
+              <div class="form-group col-lg-3">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="ti-search"></i></div>
                     <input id="searchHall" type="text"  class="form-control" >
                   </div>
                 </div>
-              </div>
-            </div>
+              </center>
+
+
           <div id="showHall"  class="row"></div>
           </div>
 
       </div>
     </div>
   </div>
+</div>
+</div>
 
-
+  <div class="card">
+    <div class="card-block">
           <div class="row">
             <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 col-xl-12">
               <div  class="row el-element-overlay">
                   <div class="card-block">
-                    <h2 class="card-title text-center "><i class="mdi mdi-trophy-variant  "></i><br> ผลงานทั่วไป</h2>
+                    <h3 class="card-title text-center ">ผลงานทั่วไป</h3>
                     <h5 class="card-title text-center ">o o o</h5>
-                    <div class="row">
-                      <div class="col-md-4">
-                      </div>
-                      <div class="col-md-4">
-                      </div>
-                      <div class="col-xlg-4 col-lg-4 col-md-4 col-sm-4 col-xl-4">
-
-                      <div class="form-group">
-                        <span class="PortCounter pull-right"></span>
+                    <center>
+                      <div class="form-group col-lg-3">
                           <div class="input-group">
                             <div class="input-group-addon"><i class="ti-search"></i></div>
                             <input id="searchPort" type="text"  class="form-control" >
                           </div>
                         </div>
-                      </div>
-                    </div>
+                      </center>
+
                   <div id="showPort"  class="row"></div>
                   </div>
 
@@ -159,7 +148,6 @@
 
         </div>
         <?php include('footer.php')?>
-                    <footer class="footer">Copyright © Information Technology 2017</footer>
     </div>
 
     <?php include('import-javascript.php')?>

@@ -28,32 +28,30 @@
 
       <div class="page-wrapper">
         <div class="card-block">
-
-        <div class="card ">
-          <center>
-            <div class="card-block col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
           <div class="card text-center">
             <div class="card-block">
-            <i class="fa fa-camera-retro fa-5x bg-dark"></i>
-              <h1>กิจกรรมของนักศึกษา</h1>
+            <img src="../images/aitivity.png" width="60vh">
+              <h3>กิจกรรมของนักศึกษา</h3>
 
 
             </div>
           </div>
-        </div>
-      </center>
+        <div class="card ">
           <div class="card-block">
             <center>
-              <h2>ปริญญาตรี</h2>
+              <h3>ปริญญาตรี</h3>
               <h5 class="card-title text-center ">o o o</h5>
 
             </center>
             <div id="showActivityBachelor" class="row">
 
             </div>
-            <br><br>
+          </div>
+        </div>
+            <div class="card ">
+              <div class="card-block">
             <center>
-              <h2>บัณฑิตศึกษา</h2>
+              <h3>บัณฑิตศึกษา</h3>
               <h5 class="card-title text-center ">o o o</h5>
 
             </center>
