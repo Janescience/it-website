@@ -6104,12 +6104,20 @@ File: scss
 .little-profile .pro-img {
   margin-top: -80px;
   margin-bottom: 20px; }
-  .little-profile .pro-img img {
-    width: 128px;
-    height: 128px;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 100%; }
+.little-profile .pro-img img {
+  width: 230px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 100%; }
+
+.little-logo .pro-img {
+  margin-top: -80px;
+  margin-bottom: 20px; }
+.little-logo .pro-img img {
+  width: 120px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 100%; }
 
 .contact-box {
   position: relative; }

@@ -14,9 +14,48 @@
 
      <style>
 
+
+
+#list_teacher .showToolTip {
+    position: relative;
+    display: inline-block;
+}
+
+#list_teacher .showToolTip .tooltipButton{
+    visibility: hidden;
+    width: 200px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#list_teacher .showToolTip .tooltipButton::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+#list_teacher .showToolTip:hover .tooltipButton {
+    visibility: visible;
+    opacity: 1;
+}
+
 .avatar {
 width:200px;
-/* margin: 10px; */
 border-radius: 500px;
 -webkit-border-radius: 500px;
 -moz-border-radius: 500px;
