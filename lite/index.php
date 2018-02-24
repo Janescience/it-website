@@ -63,7 +63,7 @@
           <div class="col-lg-3 col-xlg-3 col-md-5">
             <div class="card">
               <img class="card-img-top" src="../assets/images/background/profile-bg.jpg" alt="Card image cap">
-                <div class="card-body little-profile text-center">
+                <div class="card-body little-logo text-center">
                   <div class="card-block">
                     <div class="pro-img"><img src="../images/logo-header.gif" alt="user"></div>
                       <h3 class="m-b-0">สำนักวิชาเทคโนโลยีสังคม</h3>

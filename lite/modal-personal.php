@@ -102,7 +102,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="nameTeacherHeader">ประวัติและผลงาน <button id="printAll" class="btn btn-info " ><i class="mdi mdi-file-document"></i></button></h4>
+        <h4 class="modal-title" id="nameTeacherHeader">ประวัติและผลงาน </h4>
       </div>
       <div class="modal-body">
 
@@ -115,7 +115,6 @@
           <div id="all">
           <div class="tab-content" style="text-align:left;">
             <div  class="container tab-pane active" id="personalexp"><br>
-              <button id="printHisEducation" class="btn btn-ligth" ><i class="mdi mdi-file-document"></i></button>
             <div id="historyEducation">
             <p><strong><u><h5>ประวัติการศึกษา</h5></u></strong></p>
             <ul id="hisEdu">
@@ -128,7 +127,6 @@
           </div>
             </div>
             <div  class="container tab-pane" id="worpexp"><br>
-              <button id="printHisWork" class="btn btn-ligth " ><i class="mdi mdi-file-document"></i></button>
               <div id="historyWork">
 
               <p><strong><u><h5>ประวัติการทำงาน</h5></u></strong></p>
@@ -142,7 +140,6 @@
             </div>
             </div>
             <div class="container tab-pane" id="papers"><br>
-              <button id="printHisAcademicWork" class="btn btn-ligth"><i class="mdi mdi-file-document"></i></button>
               <div id="academicWork">
 
               <p><strong><u><h5>ผลงานวิชาการ</h5></u></strong></p>
@@ -176,7 +173,6 @@
             </div>
             </div>
             <div class="container tab-pane" id="personWork"><br>
-              <button id="printHisAcademicWork" class="btn btn-ligth"><i class="mdi mdi-file-pdf"></i></button>
 
               <p><strong><u><h5>ผลงานวิชาการ</h5></u></strong></p>
               <ul id="person_work">

@@ -69,7 +69,7 @@ $('#printAll').click(function(){
   var fileName =  'ประวัติและผลงาน.doc'; // You can use the .txt extension if you want
   downloadInnerHtml(fileName, 'all');
 });
-
+  var countTeacher=0;
 rootRefUser.on("child_added",snap => {
   var image = snap.child("image").val();
   var name = snap.child("name").val();
@@ -79,27 +79,50 @@ rootRefUser.on("child_added",snap => {
   var level = snap.child("level").val();
   var status;
 
-  if(office == "border:8px solid #00ff00;"){
+  if(office == "border:8px solid #66ff66;"){
   status="สามารถเข้าพบได้";
-}else if(office == "border:8px solid #0099ff;"){
+}else if(office == "border:8px solid #ff6666;"){
     status="ไม่อยู่";
-  }else if(office == "border:8px solid #ffcc00;"){
+  }else if(office == "border:8px solid #ffdb4d;"){
     status="กรุณารอสักครู่";
-  }else if(office == "border:8px solid #ff3300;"){
+  }else if(office == "border:8px solid #ffa366;"){
     status="ห้ามรบกวน";
   }else{
     status="ยังไม่มีสถานะ";
   }
 
   if(level == "คณาจารย์และบุคลากร"){
+    countTeacher++;
+    if(countTeacher==1){
+      $('#list_teacher').append("<div id='"+snap.key+"' class='"+'col-lg-4 text-center'+"'><div class='"+'card'+"'><img class='"+'card-img-top'+"' src='"+'../assets/images/background/profile-bg.jpg'+"'>"+
+                                "<div class='"+'card-body little-profile'+"'><div class='"+'pro-img'+"'><img src='"+image+"' class='"+'avatar'+"' style='"+office+"'></div>"+
+                                "<h5><i class='"+'ti-crown'+"'></i> หัวหน้าสาขา</h5><h6><span class='"+'text-muted'+"'> - "+status+" - </span></h6>"+
+                                "<div class='"+'showToolTip'+"'><button type='"+'button'+"'class='"+'btn btn-rounded btn-info'+"'>ข้อมูลเพิ่มเติม</button>"+
+                                "<span id='"+snap.key+"'class='"+'tooltipButton'+"'>"+
+                                "<button type='"+'button'+"'class='"+'btn btn-circle btn-secondary googleMap'+"'><i class='"+'fa fa-map-marker'+"'></i></button>"+
+                                " <button type='"+'button'+"'class='"+'btn btn-circle btn-secondary subject'+"'><i class='"+'fa fa-pencil'+"'></i></button>"+
+                                " <button type='"+'button'+"'class='"+'btn btn-circle btn-secondary graduationCap'+"'><i class='"+'fa fa-user'+"'></i></button>"+
+                                " <button type='"+'button'+"'class='"+'btn btn-circle btn-secondary officeHour'+"'><i class='"+'fa fa-calendar'+"'></i></button>"+
+                                "</span></div>"+
+                                "<br><br><div class='"+'card-footer'+"'><h4><span>"+name+"</span></h4>"+
+                                "<p><i class='"+'fa fa-envelope-o'+"' aria-hidden='"+'true'+"'></i> "+email+"<br>"+
+                                "<i class='"+'fa fa-phone'+"' aria-hidden='"+'true'+"'></i> "+telephone+"</p></div></div></div></div>");
+    }else{
+      $('#list_teacher').append("<div id='"+snap.key+"' class='"+'col-lg-4 text-center'+"'><div class='"+'card'+"'><img class='"+'card-img-top'+"' src='"+'../assets/images/background/profile-bg.jpg'+"'>"+
+                                "<div class='"+'card-body little-profile'+"'><div class='"+'pro-img'+"'><img src='"+image+"' class='"+'avatar'+"' style='"+office+"'></div>"+
+                                "<br><h6><span class='"+'text-muted'+"'> - "+status+" - </span></h6>"+
+                                "<div class='"+'showToolTip'+"'><button type='"+'button'+"'class='"+'btn btn-rounded btn-info'+"'>ข้อมูลเพิ่มเติม</button>"+
+                                "<span id='"+snap.key+"'class='"+'tooltipButton'+"'>"+
+                                "<button type='"+'button'+"'class='"+'btn btn-circle btn-secondary googleMap'+"'><i class='"+'fa fa-map-marker'+"'></i></button>"+
+                                " <button type='"+'button'+"'class='"+'btn btn-circle btn-secondary subject'+"'><i class='"+'fa fa-pencil'+"'></i></button>"+
+                                " <button type='"+'button'+"'class='"+'btn btn-circle btn-secondary graduationCap'+"'><i class='"+'fa fa-user'+"'></i></button>"+
+                                " <button type='"+'button'+"'class='"+'btn btn-circle btn-secondary officeHour'+"'><i class='"+'fa fa-calendar'+"'></i></button>"+
+                                "</span></div>"+
+                                "<br><br><div class='"+'card-footer'+"'><h4><span>"+name+"</span></h4>"+
+                                "<p><i class='"+'fa fa-envelope-o'+"' aria-hidden='"+'true'+"'></i> "+email+"<br>"+
+                                "<i class='"+'fa fa-phone'+"' aria-hidden='"+'true'+"'></i> "+telephone+"</p></div></div></div></div>");
+    }
 
-  $('#list_teacher').append("<div id='"+snap.key+"' class='"+'col-lg-4 text-center'+"'><div class='"+'hovereffect'+"'><img src='"+image+"' class='"+'avatar'+"' style='"+office+"'>"+
-                            "<div class='"+'overlay'+"'><div class='"+'rotate'+"'><p id='"+snap.key+"' class='"+'group1'+"'><a class='"+'googleMap'+"' href='"+'javascript:void(0)'+"'><i class='"+'fa fa-map-marker'+"'></i></a><a class='"+'graduationCap'+"' href='"+'javascript:void(0)'+"'><i class='"+'fa fa-user'+"'></i></a></p>"+
-                            "<p class='"+'group2'+"' id='"+snap.key+"'><a class='"+'subject'+"' href='"+'javascript:void(0)'+"'><i class='"+'fa fa-pencil'+"'></i></a><a class='"+'officeHour'+"'href='"+'javascript:void(0)'+"'><i class='"+'fa fa-calendar'+"'></i></a></p></div></div></div>"+
-                            "<h6><span class='"+'text-muted'+"'> - "+status+" - </span></h6><br><h4><span>"+name+"</span></h4>"+
-                            "<p><i class='"+'fa fa-envelope-o'+"' aria-hidden='"+'true'+"'></i> "+email+"<br>"+
-                            "<i class='"+'fa fa-phone'+"' aria-hidden='"+'true'+"'></i> "+telephone+"</p></div></div>");
-      console.log("add teacher in child_added");
   }
     $.LoadingOverlay("hide");
 });
@@ -116,13 +139,13 @@ rootRefUser.on("child_changed",snap => {
 
     $('#list_teacher').find('#'+snap.key).remove();
 
-    if(office == "border:8px solid #00ff00;"){
+    if(office == "border:8px solid #66ff66;"){
     status="สามารถเข้าพบได้";
-    }else if(office == "border:8px solid #0099ff;"){
+  }else if(office == "border:8px solid #ff6666;"){
       status="ไม่อยู่";
-    }else if(office == "border:8px solid #ffcc00;"){
+    }else if(office == "border:8px solid #ffdb4d;"){
       status="กรุณารอสักครู่";
-    }else if(office == "border:8px solid #ff3300;"){
+    }else if(office == "border:8px solid #ffa366;"){
       status="ห้ามรบกวน";
     }else{
       status="ยังไม่มีสถานะ";
@@ -130,13 +153,20 @@ rootRefUser.on("child_changed",snap => {
 
     if(level == "คณาจารย์และบุคลากร"){
 
-    $('#list_teacher').prepend("<div id='"+snap.key+"' class='"+'col-lg-4 text-center'+"'><div class='"+'hovereffect'+"'><img src='"+image+"' class='"+'avatar'+"' style='"+office+"'>"+
-                              "<div class='"+'overlay'+"'><div class='"+'rotate'+"'><p id='"+snap.key+"' class='"+'group1'+"'><a class='"+'googleMap'+"' href='"+'javascript:void(0)'+"'><i class='"+'fa fa-map-marker'+"'></i></a><a class='"+'graduationCap'+"' href='"+'javascript:void(0)'+"'><i class='"+'fa fa-user'+"'></i></a></p>"+
-                              "<p class='"+'group2'+"' id='"+snap.key+"'><a class='"+'subject'+"' href='"+'javascript:void(0)'+"'><i class='"+'fa fa-pencil'+"'></i></a><a class='"+'officeHour'+"'href='"+'javascript:void(0)'+"'><i class='"+'fa fa-calendar'+"'></i></a></p></div></div></div>"+
-                              "<h6><span class='"+'text-muted'+"'> - "+status+" - </span></h6><br><h4><span>"+name+"</span></h4>"+
-                              "<p><i class='"+'fa fa-envelope-o'+"' aria-hidden='"+'true'+"'></i> "+email+"<br>"+
-                              "<i class='"+'fa fa-phone'+"' aria-hidden='"+'true'+"'></i> "+telephone+"</p></div></div>");
-        console.log("changed teacher in child_added");
+      $('#list_teacher').append("<div id='"+snap.key+"' class='"+'col-lg-4 text-center'+"'><div class='"+'card'+"'><img class='"+'card-img-top'+"' src='"+'../assets/images/background/profile-bg.jpg'+"'>"+
+                                "<div class='"+'card-body little-profile'+"'><div class='"+'pro-img'+"'><img src='"+image+"' class='"+'avatar'+"' style='"+office+"'></div>"+
+                                "<br><h6><span class='"+'text-muted'+"'> - "+status+" - </span></h6>"+
+                                "<div class='"+'showToolTip'+"'><button type='"+'button'+"'class='"+'btn btn-rounded btn-info'+"'>ข้อมูลเพิ่มเติม</button>"+
+                                "<span id='"+snap.key+"'class='"+'tooltipButton'+"'>"+
+                                "<button type='"+'button'+"'class='"+'btn btn-circle btn-secondary googleMap'+"'><i class='"+'fa fa-map-marker'+"'></i></button>"+
+                                " <button type='"+'button'+"'class='"+'btn btn-circle btn-secondary subject'+"'><i class='"+'fa fa-pencil'+"'></i></button>"+
+                                " <button type='"+'button'+"'class='"+'btn btn-circle btn-secondary graduationCap'+"'><i class='"+'fa fa-user'+"'></i></button>"+
+                                " <button type='"+'button'+"'class='"+'btn btn-circle btn-secondary officeHour'+"'><i class='"+'fa fa-calendar'+"'></i></button>"+
+                                "</span></div>"+
+                                "<br><br><div class='"+'card-footer'+"'><h4><span>"+name+"</span></h4>"+
+                                "<p><i class='"+'fa fa-envelope-o'+"' aria-hidden='"+'true'+"'></i> "+email+"<br>"+
+                                "<i class='"+'fa fa-phone'+"' aria-hidden='"+'true'+"'></i> "+telephone+"</p></div></div></div></div>");
+        console.log("changed teacher");
     }
 
 });
@@ -153,7 +183,7 @@ rootRefUser.on("child_removed",snap => {
 });
 
 $('#list_teacher').on('click','.subject',function(){
-  var id = $(this).closest('p').attr('id');
+  var id = $(this).closest('span').attr('id');
   $('#list_subject').empty();
   var rootRefSubject = usersRef.child(id).child('subject');
   rootRefSubject.on("child_added",snap => {
@@ -169,7 +199,7 @@ $('#list_teacher').on('click','.subject',function(){
 });
 
 $('#list_teacher').on('click','.graduationCap',function(){
-  var id = $(this).closest('p').attr('id');
+  var id = $(this).closest('span').attr('id');
   $('#workTeacher').show();
   $('#workPerson').hide();
   $('#hisEdu').empty();
@@ -282,7 +312,7 @@ $('#list_teacher').on('click','.graduationCap',function(){
 
 $('#list_teacher').on('click','.googleMap',function(){
 
-  var id = $(this).closest('p').attr('id');
+  var id = $(this).closest('span').attr('id');
 
   var dblatitude = firebase.database().ref('users').child(id).child('latitude');
   dblatitude.on('value',snap =>{
@@ -357,7 +387,7 @@ function showPosition(){
 } //showPositi
 
 $('#list_teacher').on('click','.officeHour',function(){
-  var id = $(this).closest('p').attr('id');
+  var id = $(this).closest('span').attr('id');
     $('#list_day').empty();
   $('#officeHourModal').modal('show');
   var dbDay = firebase.database().ref('users').child(id).child('office_hour');
@@ -389,13 +419,13 @@ rootRefUser.on("child_added",snap => {
   var level = snap.child("level").val();
   var status;
 
-  if(office == "border:8px solid #00ff00;"){
+  if(office == "border:8px solid #66ff66;"){
   status="สามารถเข้าพบได้";
-  }else if(office == "border:8px solid #0099ff;"){
+}else if(office == "border:8px solid #ff6666;"){
     status="ไม่อยู่";
-  }else if(office == "border:8px solid #ffcc00;"){
+  }else if(office == "border:8px solid #ffdb4d;"){
     status="กรุณารอสักครู่";
-  }else if(office == "border:8px solid #ff3300;"){
+  }else if(office == "border:8px solid #ffa366;"){
     status="ห้ามรบกวน";
   }else{
     status="ยังไม่มีสถานะ";
@@ -426,13 +456,13 @@ rootRefUser.on("child_changed",snap => {
 
     $('#list_admin').find('#'+snap.key).remove();
 
-    if(office == "border:8px solid #00ff00;"){
+    if(office == "border:8px solid #66ff66;"){
     status="สามารถเข้าพบได้";
-  }else if(office == "border:8px solid #0099ff;"){
+  }else if(office == "border:8px solid #ff6666;"){
       status="ไม่อยู่";
-    }else if(office == "border:8px solid #ffcc00;"){
+    }else if(office == "border:8px solid #ffdb4d;"){
       status="กรุณารอสักครู่";
-    }else if(office == "border:8px solid #ff3300;"){
+    }else if(office == "border:8px solid #ffa366;"){
       status="ห้ามรบกวน";
     }else{
       status="ยังไม่มีสถานะ";
@@ -547,13 +577,13 @@ rootRefUser.on("child_added",snap => {
   var level = snap.child("level").val();
   var status;
 
-  if(office == "border:8px solid #00ff00;"){
+  if(office == "border:8px solid #66ff66;"){
   status="สามารถเข้าพบได้";
-  }else if(office == "border:8px solid #0099ff;"){
+}else if(office == "border:8px solid #ff6666;"){
     status="ไม่อยู่";
-  }else if(office == "border:8px solid #ffcc00;"){
+  }else if(office == "border:8px solid #ffdb4d;"){
     status="กรุณารอสักครู่";
-  }else if(office == "border:8px solid #ff3300;"){
+  }else if(office == "border:8px solid #ffa366;"){
     status="ห้ามรบกวน";
   }else{
     status="ยังไม่มีสถานะ";
@@ -583,13 +613,13 @@ rootRefUser.on("child_changed",snap => {
 
     $('#list_ta').find('#'+snap.key).remove();
 
-    if(office == "border:8px solid #00ff00;"){
+    if(office == "border:8px solid #66ff66;"){
     status="สามารถเข้าพบได้";
-    }else if(office == "border:8px solid #0099ff;"){
+  }else if(office == "border:8px solid #ff6666;"){
       status="ไม่อยู่";
-    }else if(office == "border:8px solid #ffcc00;"){
+    }else if(office == "border:8px solid #ffdb4d;"){
       status="กรุณารอสักครู่";
-    }else if(office == "border:8px solid #ff3300;"){
+    }else if(office == "border:8px solid #ffa366;"){
       status="ห้ามรบกวน";
     }else{
       status="ยังไม่มีสถานะ";

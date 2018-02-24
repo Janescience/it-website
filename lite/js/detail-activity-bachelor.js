@@ -38,11 +38,11 @@ var count=0;
 
   });
 
-  if(count == 0){
-    $('#viewer').empty();
-    $('#thumbnails').append("<div class='"+'col-lg-4'+"'></div><h4 class='"+'text-center col-lg-4'+"'>"+
-                            " กิจกรรมนี้ไม่มีรูปภาพ</h4><div class='"+'col-lg-4'+"'></div>");
-  }
+  // if(count == 0){
+  //   $('#viewer').empty();
+  //   $('#thumbnails').append("<div class='"+'col-lg-4'+"'></div><h4 class='"+'text-center col-lg-4'+"'>"+
+  //                           " กิจกรรมนี้ไม่มีรูปภาพ</h4><div class='"+'col-lg-4'+"'></div>");
+  // }
 
 
 
