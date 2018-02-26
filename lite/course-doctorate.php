@@ -31,7 +31,10 @@
               <div class="card">
                 <div class="card-body">
                   <br>
-                  <h1 class="card-title text-center">หลักสูตร</h1>
+                  <center>
+                  <img src="../images/doctorate-icon.png" width="80vh">
+                </center>
+                  <h2 class="card-title text-center">หลักสูตร</h2>
                   <h4 class="card-subtitle text-center" >ระดับปริญญาเอก </h4><br>
                   <h4 class="text-center" >ชื่อหลักสูตร</h4>
 

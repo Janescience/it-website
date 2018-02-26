@@ -62,22 +62,17 @@
         <div class="row">
           <div class="col-lg-3 col-xlg-3 col-md-5">
             <div class="card">
-              <img class="card-img-top" src="../assets/images/background/profile-bg.jpg" alt="Card image cap">
+              <img class="card-img-top" src="../images/cloud.jpg" alt="Card image cap">
                 <div class="card-body little-logo text-center">
                   <div class="card-block">
                     <div class="pro-img"><img src="../images/logo-header.gif" alt="user"></div>
                       <h3 class="m-b-0">สำนักวิชาเทคโนโลยีสังคม</h3>
-                      <p>สาขาวิชาเทคโนโลยีสารสนเทศ </p><br><br><br>
+                      <p>สาขาวิชาเทคโนโลยีสารสนเทศ </p><br><br><br><br>
                       <a href="https://www.facebook.com/ITSuranaree/" class="m-t-10 waves-effect waves-dark btn btn-info btn-md btn-rounded">
                       <i class="mdi mdi-facebook-box"></i> ติดตาม</a>
 
                       <div class="row text-center m-t-20">
-                        <div class="col-lg-4 col-md-4 m-t-20">
-                          <h3 class="m-b-0 font-light">21</h3><small>ก่อตั้ง/ปี</small></div>
-                        <div class="col-lg-4 col-md-4 m-t-20">
-                          <h3 class="m-b-0 font-light">5</h3><small>หลักสูตร</small></div>
-                        <div class="col-lg-4 col-md-4 m-t-20">
-                          <h3 class="m-b-0 font-light">16</h3><small>คณาจารย์</small></div>
+
                       </div>
 
                   </div>
@@ -149,7 +144,7 @@
 
                     <div class="el-overlay">
                       <ul class="el-info">
-                        <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg">รายละเอียด</a></li>
+                        <li><a class="btn default btn-outline image-popup-vertical-fit" href="https://it2.sut.ac.th/prj60_g7/it-website/lite/course-bachelor.php">รายละเอียด</a></li>
                       </ul>
                     </div>
                   </div>
@@ -170,7 +165,7 @@
 
                     <div class="el-overlay">
                       <ul class="el-info">
-                        <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg">รายละเอียด</a></li>
+                        <li><a class="btn default btn-outline image-popup-vertical-fit" href="https://it2.sut.ac.th/prj60_g7/it-website/lite/course-master.php">รายละเอียด</a></li>
                       </ul>
                     </div>
                   </div>
@@ -190,7 +185,7 @@
                     <img  id="imageDoctor"  alt="user">
                       <div class="el-overlay">
                         <ul class="el-info">
-                            <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg">รายละเอียด</a></li>
+                            <li><a class="btn default btn-outline image-popup-vertical-fit" href="https://it2.sut.ac.th/prj60_g7/it-website/lite/course-doctorate.php">รายละเอียด</a></li>
 
                         </ul>
                       </div>

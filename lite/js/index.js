@@ -14,24 +14,55 @@ $(document).ready(function(){
     var dateViewPage = dateAndTime.toDateString();
     var monthViewPage = dateViewPage.split(" ")[1];
     var yearViewPage = dateViewPage.split(" ")[3];
+    var n,s,countPage=0,countSum=0;
+    var countView,sumView;
 
-    var n = localStorage.getItem('counter_index');
-    n++;
 
-    var countView = {
+    var numCountIndex = firebase.database().ref('statistic/index_page').child(yearViewPage).child(monthViewPage).child('count');
+    numCountIndex.on('value',snap=>{
+
+    n = snap.val();
+
+    if(n==null){
+      n=0;
+    }else{
+      n++;
+    }
+
+    countView = {
       count:n
     };
 
-    localStorage.setItem("counter_index", n);
-    firebase.database().ref('statistic/index_page').child(yearViewPage).child(monthViewPage).update(countView);
+    countPage++;
+    if(countPage==1){
+      firebase.database().ref('statistic/index_page').child(yearViewPage).child(monthViewPage).update(countView);
+    }
 
-    var s = localStorage.getItem('counter_sum');
-    s++;
-    var sumView = {
+    });
+
+
+    var sumAll = firebase.database().ref('statistic/sum').child(yearViewPage).child(monthViewPage).child('sum');
+    sumAll.on('value',snap=>{
+
+    s = snap.val();
+
+    if(s==null){
+      s=0;
+    }else{
+      s++;
+    }
+
+    sumView = {
       sum:s
     };
-    localStorage.setItem("counter_sum", s);
+
+    countSum++;
+    if(countSum==1){
     firebase.database().ref('statistic/sum').child(yearViewPage).child(monthViewPage).update(sumView);
+    }
+
+    });
+
 
 
   var i=0;

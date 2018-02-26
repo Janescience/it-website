@@ -12,15 +12,7 @@ var config = {
 
   firebase.initializeApp(config);
 
-  // localStorage.removeItem('counter_sum');
-  // localStorage.removeItem('counter_index');
-  // localStorage.removeItem('counter_activity');
-  // localStorage.removeItem('counter_course_bachelor');
-  // localStorage.removeItem('counter_course_doctorate');
-  // localStorage.removeItem('counter_course_master');
-  // localStorage.removeItem('counter_personal');
-  // localStorage.removeItem('counter_portfolio_bachelor');
-  // localStorage.removeItem('counter_portfolio_graduate');
+
 
   var imageBecRef = firebase.database().ref("website/student/bechelor/activity").child(sessionStorage.getItem("activityId")).child('activity_image');
 
