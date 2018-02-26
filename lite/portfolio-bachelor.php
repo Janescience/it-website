@@ -39,8 +39,6 @@
           <div class="row text-center">
 
           <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
-
-
               <img src="../images/trophy.png" width="70vh">
               <h3 class="card-title text-center"> ผลงานระดับปริญญาตรี </h3>
 

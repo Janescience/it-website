@@ -9,7 +9,6 @@
     <meta name="author" content="">
 
      <?php  include('header.php') ?>
-     <link href="css/hover-teacher.css" rel="stylesheet">
      <link href="css/hover-staff.css" rel="stylesheet">
 
      <style>
@@ -55,7 +54,7 @@
 }
 
 .avatar {
-width:200px;
+width:230px;
 border-radius: 500px;
 -webkit-border-radius: 500px;
 -moz-border-radius: 500px;
@@ -76,11 +75,18 @@ border-radius: 500px;
 
     <div class="page-wrapper">
       <div class="card-block">
-        <div class="card col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
-          <div class="card-block">
-            <h1 class="card-title text-center "> คณาจารย์ </h1>
-          </div>
+        <div class="card">
+            <div class="card-block">
+        <div class="row text-center">
+
+        <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
+            <img src="../images/teacher-icon.png" width="80vh">
+            <h2 class="card-title text-center"> คณาจารย์ </h2>
+
         </div>
+      </div>
+      </div>
+    </div>
           <div class="card">
             <div class="card-block">
               <br>
@@ -91,11 +97,18 @@ border-radius: 500px;
 </div>
 
 
-        <div class="card col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
-          <div class="card-block">
-          <h1 class="card-title text-center "><i class="mdi mdi-user"></i> เจ้าหน้าที่บริหารงานทั่วไป </h1>
-          </div>
-        </div>
+<div class="card">
+    <div class="card-block">
+<div class="row text-center">
+
+<div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
+    <img src="../images/admin-icon.png" width="80vh">
+    <h2 class="card-title text-center"> เจ้าหน้าที่บริหารงานทั่วไป </h2>
+
+</div>
+</div>
+</div>
+</div>
 
         <div class="card">
           <div class="card-block">
@@ -106,11 +119,18 @@ border-radius: 500px;
 </div>
 
 
-        <div class="card col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
-          <div class="card-block">
-            <h1 class="card-title text-center "><i class="mdi mdi-user"></i> ผู้ช่วยสอนและวิจัย </h1>
-          </div>
-        </div>
+<div class="card">
+    <div class="card-block">
+<div class="row text-center">
+
+<div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 ">
+    <img src="../images/ta-icon.png" width="80vh">
+    <h2 class="card-title text-center"> ผู้ช่วยสอนและวิจัย </h2>
+
+</div>
+</div>
+</div>
+</div>
 
         <div class="card">
           <div class="card-block">

@@ -16,23 +16,54 @@ $(document).ready(function(){
       var dateViewPage = dateAndTime.toDateString();
       var monthViewPage = dateViewPage.split(" ")[1];
       var yearViewPage = dateViewPage.split(" ")[3];
+      var n,s,countPage=0,countSum=0;
+      var countView,sumView;
 
-      var n = localStorage.getItem('counter_portfolio_graduate');
-      n++;
-      var countView = {
-        count:n
-      };
+      var numCountPortGraduate = firebase.database().ref('statistic/portfolio_graduate_page').child(yearViewPage).child(monthViewPage).child('count');
+      numCountPortGraduate.on('value',snap=>{
+        n = snap.val();
 
-      localStorage.setItem("counter_portfolio_graduate", n);
-       firebase.database().ref('statistic/portfolio_graduate_page').child(yearViewPage).child(monthViewPage).update(countView);
+        if(n==null){
+          n=0;
+        }else{
+          n++;
+        }
 
-       var s = localStorage.getItem('counter_sum');
-       s++;
-       var sumView = {
-         sum:s
-       };
-       localStorage.setItem("counter_sum", s);
-       firebase.database().ref('statistic/sum').child(yearViewPage).child(monthViewPage).update(sumView);
+        countView = {
+          count:n
+        };
+
+        countPage++;
+
+        if(countPage==1){
+          firebase.database().ref('statistic/portfolio_graduate_page').child(yearViewPage).child(monthViewPage).update(countView);
+        }
+
+      });
+
+
+       var sumAll = firebase.database().ref('statistic/sum').child(yearViewPage).child(monthViewPage).child('sum');
+       sumAll.on('value',snap=>{
+         s = snap.val();
+
+         if(s==null){
+           s=0;
+         }else{
+           s++;
+         }
+
+         sumView = {
+           sum:s
+         };
+
+         countSum++;
+
+         if(countSum==1){
+         firebase.database().ref('statistic/sum').child(yearViewPage).child(monthViewPage).update(sumView);
+         }
+
+       });
+
 
   var portGraRef = firebase.database().ref("website/student/graduate/portfolio");
 
