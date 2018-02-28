@@ -65,10 +65,6 @@ $(document).ready(function(){
      });
 
 
-
-
-     firebase.database().ref('statistic/sum').child(yearViewPage).child(monthViewPage).update(sumView);
-
     var activityBecRef = firebase.database().ref("website/student/bechelor/activity");
 
   // ======================================================= Get Portfolio =======================================================
@@ -107,7 +103,7 @@ $(document).ready(function(){
     $('#showActivityBachelor').on('click','.image',function(){
       var id = $(this).closest('div').attr('id');
       sessionStorage.setItem("activityId",id);
-      window.open("http://localhost/project/it-website/lite/detail-activity-bachelor.php");
+      window.open("http://it2.sut.ac.th/prj60_g7/it-website/lite/detail-activity-bachelor.php");
     });
 
     $('#showActivityBachelor').on('click','.video',function(){
@@ -167,7 +163,7 @@ $(document).ready(function(){
     $('#showActivityGraduation').on('click','.image',function(){
       var id = $(this).closest('div').attr('id');
       sessionStorage.setItem("activityId",id);
-      window.open("http://localhost/project/it-website/lite/detail-activity-graduate.php");
+      window.open("http://it2.sut.ac.th/prj60_g7/it-website/lite/detail-activity-graduate.php");
     });
 
 
